@@ -1,8 +1,9 @@
 # Portfolio website
 
 Static personal product portfolio built with React, TypeScript, Vite, Tailwind CSS,
-React Router, and Lucide React. This foundation contains routing placeholders only.
-Visual design and content migration belong to subsequent issues.
+React Router, and Lucide React. The application currently renders routing
+placeholders; local portfolio content is migrated separately from presentation.
+Visual design and content rendering belong to subsequent issues.
 
 ## Setup
 
@@ -19,15 +20,16 @@ Commit `package-lock.json` when dependencies change.
 
 ## Commands
 
-| Command                | Purpose                                                       |
-| ---------------------- | ------------------------------------------------------------- |
-| `npm run dev`          | Start the local development server with hot reload            |
-| `npm run lint`         | Run ESLint; warnings fail the check                           |
-| `npm run typecheck`    | Check application and Vite configuration types                |
-| `npm run format`       | Format source, configuration, and documentation with Prettier |
-| `npm run format:check` | Check formatting without changing files                       |
-| `npm run build`        | Check types and produce the static site in `dist/`            |
-| `npm run preview`      | Serve the production build locally                            |
+| Command                  | Purpose                                                       |
+| ------------------------ | ------------------------------------------------------------- |
+| `npm run dev`            | Start the local development server with hot reload            |
+| `npm run lint`           | Run ESLint; warnings fail the check                           |
+| `npm run typecheck`      | Check application and Vite configuration types                |
+| `npm run format`         | Format source, configuration, and documentation with Prettier |
+| `npm run format:check`   | Check formatting without changing files                       |
+| `npm run build`          | Check types and produce the static site in `dist/`            |
+| `npm run preview`        | Serve the production build locally                            |
+| `npm run verify:content` | Check migrated copy and metadata against the Notion snapshots |
 
 Run lint, typecheck, format:check, and build before opening a pull request.
 The preview server is for local verification, not production hosting.
@@ -38,7 +40,7 @@ The preview server is for local verification, not production hosting.
 src/
   assets/       Images and other assets imported by the application
   components/   Shared UI, currently just the page layout
-  content/      Future local portfolio content
+  content/      Local portfolio copy, metadata, and media references
   pages/        Homepage, case-study template, and not-found page
   App.tsx       Route definitions
   main.tsx      Application entry point and router
@@ -48,7 +50,7 @@ src/
 - Use TypeScript and functional React components. Strict type checking is enabled.
 - Keep page-specific UI in `pages/`; extract shared components when reuse emerges.
 - Use Tailwind utilities and Lucide icons. No component library is introduced.
-- Keep future content in local files under `src/content/`. There is no runtime
+- Keep content in local files under `src/content/`. There is no runtime
   Notion connection, backend, database, authentication, or CMS.
 - Import assets from `src/assets/` so Vite handles their production URLs. If a
   future asset needs to live in `public/`, reference it with `import.meta.env.BASE_URL`
@@ -56,11 +58,26 @@ src/
 - Prettier uses two spaces, single quotes, and no semicolons. ESLint checks
   TypeScript, React Hooks, and React Refresh conventions.
 
+## Content snapshots
+
+The homepage copy, five complete case studies, eight selected testimonial
+excerpts, and pending media references live in `src/content/`. See the
+[content guide](src/content/README.md) and
+[issue #5 migration report](docs/content-migration/report.md) for format,
+provenance, limitations, and verification. Run `npm run verify:content` before
+changing or reviewing migrated copy. The verbatim Markdown files are deliberately
+excluded from Prettier. Content rendering and image migration are separate issues.
+
+The standalone coaching section is excluded from active content and the public
+audit snapshot. Source exports under `docs/content-migration/sources/` are audit
+material, not site content; the homepage snapshot records this deliberate redaction.
+
 ## Routes and GitHub Pages
 
 The router supports `/` and `/work/:slug`, plus a catch-all not-found page.
 Every slug currently renders the same diagnostic placeholder; `example` is only
-a routing fixture. Real case studies and valid slugs will be added with content.
+a routing fixture. Rendering the migrated articles and validating real slugs belong
+to a subsequent issue.
 
 Vite's `base` is `/portfolio_website/`, matching this repository's GitHub Pages
 project path. React Router uses `HashRouter`, keeping the route after `#`:

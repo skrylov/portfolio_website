@@ -1,0 +1,49 @@
+{
+  "testimonials": {
+    "sourceUrl": "https://app.notion.com/p/40e3732f32cc8155bfffe79cfd4368ff",
+    "sourcePageId": "40e3732f32cc8155bfffe79cfd4368ff",
+    "lastEditedAt": "2026-11-04T16:32:10.786Z"
+  },
+  "designDirection": {
+    "sourceUrl": "https://app.notion.com/p/40e3732f32cc818fb031c9cce7777b18",
+    "sourcePageId": "40e3732f32cc818fb031c9cce7777b18",
+    "lastEditedAt": "2026-11-04T16:50:42.160Z"
+  },
+  "pageMentions": [
+    {
+      "sourceUrl": "https://app.notion.com/p/4023732f32cc81738b29f26341e5521b",
+      "slug": "smartsaver-native-mobile-apps",
+      "title": "📱 SmartSaver: Launching Native Mobile Apps in 8 Months"
+    },
+    {
+      "sourceUrl": "https://app.notion.com/p/4003732f32cc81e986e7d5df616b4b9e",
+      "slug": "smartsaver-passive-income",
+      "title": "💶 SmartSaver: Reducing Withdrawals… by Automating Them"
+    },
+    {
+      "sourceUrl": "https://app.notion.com/p/4053732f32cc81b5a7f3e4f9fefa321c",
+      "slug": "smartsaver-infrastructure-for-scale",
+      "title": "🧩 SmartSaver: Building the Infrastructure for Scale"
+    },
+    {
+      "sourceUrl": "https://app.notion.com/p/4053732f32cc811eaa3af0d5b177eca6",
+      "slug": "smartsaver-banner-launches",
+      "title": "🧩 SmartSaver: Turning Banner Launches from Days into Minutes"
+    },
+    {
+      "sourceUrl": "https://app.notion.com/p/4003732f32cc8126a78dea067c88ab5d",
+      "slug": "solid-solar-prospecting-platform",
+      "title": "☀️ SOLID: Building a Solar Prospecting Platform from Scratch"
+    }
+  ],
+  "databaseBindings": [
+    {
+      "sourceUrl": "https://app.notion.com/p/4013732f32cc81aeaea9d04b6a7528d4",
+      "localItems": "cases.json"
+    },
+    {
+      "sourceUrl": "https://app.notion.com/p/26385d7069094470b36626b00e6feff8",
+      "localItems": "cases.json"
+    }
+  ]
+}

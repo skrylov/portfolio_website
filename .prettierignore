@@ -1,3 +1,7 @@
 node_modules/
 dist/
 package-lock.json
+
+# Verbatim Notion exports: do not reflow or normalize their copy/markup.
+src/content/cases/*.md
+src/content/homepage/*.md

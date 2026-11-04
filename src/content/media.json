@@ -1,0 +1,502 @@
+[
+  {
+    "id": "ab1625d1-8599-4862-9e7f-f8dc71faa8ab",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4013732f32cc81d7a35acda97dd69581",
+    "source": "notion-file-block://ab1625d1-8599-4862-9e7f-f8dc71faa8ab/881831b5-99af-411c-b160-114b3501a42b?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=sergey-krylov-portrait.jpg",
+    "originalFilename": "sergey-krylov-portrait.jpg",
+    "contentFile": "src/content/homepage/hero.md",
+    "line": 18,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/homepage/ab1625d1-8599-4862-9e7f-f8dc71faa8ab.jpg",
+    "status": "pending-issue-6"
+  },
+  {
+    "id": "ccdc72bc-e758-4b79-9351-97e2c1f93cf8",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4013732f32cc81d7a35acda97dd69581",
+    "source": "notion-file-block://ccdc72bc-e758-4b79-9351-97e2c1f93cf8/20aa862f-c543-4ff0-9977-b232c7663587?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=Monethon01.10.2024-HarryTiits-6731.jpg",
+    "originalFilename": "Monethon01.10.2024-HarryTiits-6731.jpg",
+    "contentFile": "src/content/homepage/about.md",
+    "line": 14,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/homepage/ccdc72bc-e758-4b79-9351-97e2c1f93cf8.jpg",
+    "status": "pending-issue-6"
+  },
+  {
+    "id": "homepage-cover",
+    "kind": "cover",
+    "sourcePageUrl": "https://app.notion.com/p/4013732f32cc81d7a35acda97dd69581",
+    "source": "https://prod-files-secure.s3.us-west-2.amazonaws.com/65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51/16bf72f7-ef79-4621-99bd-80ce0d5bd23d/Monethon01.10.2024-HarryTiits-6556.jpg",
+    "originalFilename": "Monethon01.10.2024-HarryTiits-6556.jpg",
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/homepage/cover-Monethon01.10.2024-HarryTiits-6556.jpg",
+    "status": "pending-issue-6"
+  },
+  {
+    "id": "e6705199-9340-46f9-874e-c1df1787cec0",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4023732f32cc81738b29f26341e5521b",
+    "source": "notion-file-block://e6705199-9340-46f9-874e-c1df1787cec0/49af4cf9-92c2-4ac9-bd98-2e21dd4a2ffa?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=2261a2dc-0c0c-493d-8cb6-abba74bfc612.png",
+    "originalFilename": "2261a2dc-0c0c-493d-8cb6-abba74bfc612.png",
+    "contentFile": "src/content/cases/smartsaver-native-mobile-apps.md",
+    "line": 1,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-native-mobile-apps/e6705199-9340-46f9-874e-c1df1787cec0.png",
+    "status": "pending-issue-6"
+  },
+  {
+    "id": "9e047ea3-677b-4d95-8e5f-1cb929f7d186",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4023732f32cc81738b29f26341e5521b",
+    "source": "notion-file-block://9e047ea3-677b-4d95-8e5f-1cb929f7d186/0280f2c7-567d-485d-bcb4-85529ee1fa28?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=smartsaver-wealth-overview.png",
+    "originalFilename": "smartsaver-wealth-overview.png",
+    "contentFile": "src/content/cases/smartsaver-native-mobile-apps.md",
+    "line": 43,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-native-mobile-apps/9e047ea3-677b-4d95-8e5f-1cb929f7d186.png",
+    "status": "pending-issue-6",
+    "adjacentCaption": {
+      "text": "Wealth overview, Vault creation and investment review.",
+      "scope": "group",
+      "line": 53
+    }
+  },
+  {
+    "id": "226c72df-9e60-47c2-a1d1-f48368ec78ca",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4023732f32cc81738b29f26341e5521b",
+    "source": "notion-file-block://226c72df-9e60-47c2-a1d1-f48368ec78ca/55a4dc42-ae73-444a-859f-4432507f3fa4?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=smartsaver-new-vault.png",
+    "originalFilename": "smartsaver-new-vault.png",
+    "contentFile": "src/content/cases/smartsaver-native-mobile-apps.md",
+    "line": 46,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-native-mobile-apps/226c72df-9e60-47c2-a1d1-f48368ec78ca.png",
+    "status": "pending-issue-6",
+    "adjacentCaption": {
+      "text": "Wealth overview, Vault creation and investment review.",
+      "scope": "group",
+      "line": 53
+    }
+  },
+  {
+    "id": "95ca7fbc-044d-4de8-a1de-95dcb9e42528",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4023732f32cc81738b29f26341e5521b",
+    "source": "notion-file-block://95ca7fbc-044d-4de8-a1de-95dcb9e42528/87c98bff-6c27-449e-8ece-d1d77f613cd5?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=smartsaver-transactions.png",
+    "originalFilename": "smartsaver-transactions.png",
+    "contentFile": "src/content/cases/smartsaver-native-mobile-apps.md",
+    "line": 49,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-native-mobile-apps/95ca7fbc-044d-4de8-a1de-95dcb9e42528.png",
+    "status": "pending-issue-6",
+    "adjacentCaption": {
+      "text": "Wealth overview, Vault creation and investment review.",
+      "scope": "group",
+      "line": 53
+    }
+  },
+  {
+    "id": "b997b4a2-a989-4603-9b32-065b7d0624b8",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4023732f32cc81738b29f26341e5521b",
+    "source": "notion-file-block://b997b4a2-a989-4603-9b32-065b7d0624b8/709d4b54-238b-4897-863d-06906013f434?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=smartsaver-passive-income.png",
+    "originalFilename": "smartsaver-passive-income.png",
+    "contentFile": "src/content/cases/smartsaver-native-mobile-apps.md",
+    "line": 83,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-native-mobile-apps/b997b4a2-a989-4603-9b32-065b7d0624b8.png",
+    "status": "pending-issue-6"
+  },
+  {
+    "id": "5991b7d0-3a6a-4140-845d-e1be5ef14384",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4023732f32cc81738b29f26341e5521b",
+    "source": "notion-file-block://5991b7d0-3a6a-4140-845d-e1be5ef14384/b4c80b21-5f5e-4404-952e-5996ffacee2d?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=smartsaver-investment-review.png",
+    "originalFilename": "smartsaver-investment-review.png",
+    "contentFile": "src/content/cases/smartsaver-native-mobile-apps.md",
+    "line": 86,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-native-mobile-apps/5991b7d0-3a6a-4140-845d-e1be5ef14384.png",
+    "status": "pending-issue-6"
+  },
+  {
+    "id": "6e8c6920-411b-4aa0-8620-8800b1a8e2dc",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4023732f32cc81738b29f26341e5521b",
+    "source": "notion-file-block://6e8c6920-411b-4aa0-8620-8800b1a8e2dc/a656e7d9-4d48-4b1c-8cd6-bb30c81998b5?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=smartsaver-account-settings.png",
+    "originalFilename": "smartsaver-account-settings.png",
+    "contentFile": "src/content/cases/smartsaver-native-mobile-apps.md",
+    "line": 102,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-native-mobile-apps/6e8c6920-411b-4aa0-8620-8800b1a8e2dc.png",
+    "status": "pending-issue-6",
+    "adjacentCaption": {
+      "text": "Account settings were developed after the initial scope and had not yet shipped during my involvement.",
+      "scope": "image",
+      "line": 104
+    }
+  },
+  {
+    "id": "smartsaver-native-mobile-apps-thumbnail",
+    "kind": "thumbnail",
+    "sourcePageUrl": "https://app.notion.com/p/4023732f32cc81738b29f26341e5521b",
+    "sourceProperty": "Thumbnail",
+    "source": "file://%7B%22source%22%3A%22attachment%3Aac441d65-3fe3-4e88-8ed5-2335b9f879fd%3Asmartsaver-signup-cover.webp%22%2C%22permissionRecord%22%3A%7B%22table%22%3A%22block%22%2C%22id%22%3A%224023732f-32cc-8173-8b29-f26341e5521b%22%2C%22spaceId%22%3A%2265f780ce-7ac1-4bdd-99ac-9b9c64d4ac51%22%7D%7D",
+    "originalFilename": "smartsaver-signup-cover.webp",
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-native-mobile-apps/thumbnail-smartsaver-signup-cover.webp",
+    "status": "pending-issue-6"
+  },
+  {
+    "id": "4003732f-32cc-80d5-9c61-e9cd3c7f746d",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4003732f32cc81e986e7d5df616b4b9e",
+    "source": "notion-file-block://4003732f-32cc-80d5-9c61-e9cd3c7f746d/ae66fd11-3c7e-462e-baa6-019939ee774f?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=image.png",
+    "originalFilename": "image.png",
+    "contentFile": "src/content/cases/smartsaver-passive-income.md",
+    "line": 55,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-passive-income/4003732f-32cc-80d5-9c61-e9cd3c7f746d.png",
+    "status": "pending-issue-6",
+    "adjacentCaption": {
+      "text": "Before activation: estimated monthly earnings are visible.",
+      "scope": "image",
+      "line": 57
+    }
+  },
+  {
+    "id": "4003732f-32cc-803e-87e4-d11794ad8076",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4003732f32cc81e986e7d5df616b4b9e",
+    "source": "notion-file-block://4003732f-32cc-803e-87e4-d11794ad8076/fa4be114-6c7b-44de-928f-c5abe1dbd998?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=image.png",
+    "originalFilename": "image.png",
+    "contentFile": "src/content/cases/smartsaver-passive-income.md",
+    "line": 60,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-passive-income/4003732f-32cc-803e-87e4-d11794ad8076.png",
+    "status": "pending-issue-6",
+    "adjacentCaption": {
+      "text": "After activation: the next payout and active status appear.",
+      "scope": "image",
+      "line": 62
+    }
+  },
+  {
+    "id": "4003732f-32cc-8043-b06e-cff8852628f4",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4003732f32cc81e986e7d5df616b4b9e",
+    "source": "notion-file-block://4003732f-32cc-8043-b06e-cff8852628f4/b91ce2ca-e00b-4d39-be65-160964227247?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=image.png",
+    "originalFilename": "image.png",
+    "contentFile": "src/content/cases/smartsaver-passive-income.md",
+    "line": 69,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-passive-income/4003732f-32cc-8043-b06e-cff8852628f4.png",
+    "status": "pending-issue-6",
+    "adjacentCaption": {
+      "text": "The payout page showed the next estimated amount, payment date and destination. The Summary screens use SmartSaver's earlier UI; the dedicated page reflects the newer React design.",
+      "scope": "image",
+      "line": 71
+    }
+  },
+  {
+    "id": "smartsaver-passive-income-thumbnail",
+    "kind": "thumbnail",
+    "sourcePageUrl": "https://app.notion.com/p/4003732f32cc81e986e7d5df616b4b9e",
+    "sourceProperty": "Thumbnail",
+    "source": "file://%7B%22source%22%3A%22attachment%3A597b959d-65be-43c0-b3bf-b6456ec61668%3Asmartsaver-passive-income-gallery.png%22%2C%22permissionRecord%22%3A%7B%22table%22%3A%22block%22%2C%22id%22%3A%224003732f-32cc-81e9-86e7-d5df616b4b9e%22%2C%22spaceId%22%3A%2265f780ce-7ac1-4bdd-99ac-9b9c64d4ac51%22%7D%7D",
+    "originalFilename": "smartsaver-passive-income-gallery.png",
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-passive-income/thumbnail-smartsaver-passive-income-gallery.png",
+    "status": "pending-issue-6"
+  },
+  {
+    "id": "d6376160-9b1a-40bf-8550-dae53998452c",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4053732f32cc81b5a7f3e4f9fefa321c",
+    "source": "notion-file-block://d6376160-9b1a-40bf-8550-dae53998452c/f038fec8-9975-4a69-9f1a-3a4d247025d8?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=account-templates-before.svg",
+    "originalFilename": "account-templates-before.svg",
+    "contentFile": "src/content/cases/smartsaver-infrastructure-for-scale.md",
+    "line": 40,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-infrastructure-for-scale/d6376160-9b1a-40bf-8550-dae53998452c.svg",
+    "status": "pending-issue-6"
+  },
+  {
+    "id": "68688232-9cca-41b2-a1d9-a3a35e025326",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4053732f32cc81b5a7f3e4f9fefa321c",
+    "source": "notion-file-block://68688232-9cca-41b2-a1d9-a3a35e025326/87dfec01-1d38-4c42-8b5e-00ab8073ed7e?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=account-templates-configuration.svg",
+    "originalFilename": "account-templates-configuration.svg",
+    "contentFile": "src/content/cases/smartsaver-infrastructure-for-scale.md",
+    "line": 49,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-infrastructure-for-scale/68688232-9cca-41b2-a1d9-a3a35e025326.svg",
+    "status": "pending-issue-6"
+  },
+  {
+    "id": "a8cedf2d-ea35-4a1e-855e-7562a39c4131",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4053732f32cc81b5a7f3e4f9fefa321c",
+    "source": "notion-file-block://a8cedf2d-ea35-4a1e-855e-7562a39c4131/88bc3fc0-caf9-40a5-a697-18fb9e21c3c2?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=account-templates-relationships.svg",
+    "originalFilename": "account-templates-relationships.svg",
+    "contentFile": "src/content/cases/smartsaver-infrastructure-for-scale.md",
+    "line": 63,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-infrastructure-for-scale/a8cedf2d-ea35-4a1e-855e-7562a39c4131.svg",
+    "status": "pending-issue-6"
+  },
+  {
+    "id": "c2a7d23c-3257-44b9-8d27-629f4bb3dfc1",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4053732f32cc81b5a7f3e4f9fefa321c",
+    "source": "notion-file-block://c2a7d23c-3257-44b9-8d27-629f4bb3dfc1/abb4f04f-49cc-4b08-a2db-aa1aba23f950?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=account-template-admin-details.svg",
+    "originalFilename": "account-template-admin-details.svg",
+    "contentFile": "src/content/cases/smartsaver-infrastructure-for-scale.md",
+    "line": 69,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-infrastructure-for-scale/c2a7d23c-3257-44b9-8d27-629f4bb3dfc1.svg",
+    "status": "pending-issue-6",
+    "adjacentCaption": {
+      "text": "The actual SmartSaver Admin interface.",
+      "scope": "image",
+      "line": 71
+    }
+  },
+  {
+    "id": "56c7765b-158f-4df0-9992-f6108047a7e1",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4053732f32cc81b5a7f3e4f9fefa321c",
+    "source": "notion-file-block://56c7765b-158f-4df0-9992-f6108047a7e1/80621dec-adca-4da3-a231-c30711ea6ee1?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=account-template-admin-features.svg",
+    "originalFilename": "account-template-admin-features.svg",
+    "contentFile": "src/content/cases/smartsaver-infrastructure-for-scale.md",
+    "line": 76,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-infrastructure-for-scale/56c7765b-158f-4df0-9992-f6108047a7e1.svg",
+    "status": "pending-issue-6"
+  },
+  {
+    "id": "smartsaver-infrastructure-for-scale-thumbnail",
+    "kind": "thumbnail",
+    "sourcePageUrl": "https://app.notion.com/p/4053732f32cc81b5a7f3e4f9fefa321c",
+    "sourceProperty": "Thumbnail",
+    "source": "file://%7B%22source%22%3A%22attachment%3A87dfec01-1d38-4c42-8b5e-00ab8073ed7e%3Aaccount-templates-configuration.svg%22%2C%22permissionRecord%22%3A%7B%22table%22%3A%22block%22%2C%22id%22%3A%224053732f-32cc-81b5-a7f3-e4f9fefa321c%22%2C%22spaceId%22%3A%2265f780ce-7ac1-4bdd-99ac-9b9c64d4ac51%22%7D%7D",
+    "originalFilename": "account-templates-configuration.svg",
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-infrastructure-for-scale/thumbnail-account-templates-configuration.svg",
+    "status": "pending-issue-6"
+  },
+  {
+    "id": "cd7cc3fc-dfbd-4266-baa6-ee73cb680e04",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4053732f32cc811eaa3af0d5b177eca6",
+    "source": "notion-file-block://cd7cc3fc-dfbd-4266-baa6-ee73cb680e04/48049aa7-bbd7-4277-8a90-e6b4e19f6d02?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=bs-system-model.jpg",
+    "originalFilename": "bs-system-model.jpg",
+    "contentFile": "src/content/cases/smartsaver-banner-launches.md",
+    "line": 54,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-banner-launches/cd7cc3fc-dfbd-4266-baa6-ee73cb680e04.jpg",
+    "status": "pending-issue-6",
+    "adjacentCaption": {
+      "text": "The placement and slot model, and the actual administration interface.",
+      "scope": "group",
+      "line": 58
+    }
+  },
+  {
+    "id": "393f6d62-fb91-41f0-9a1f-7be0fbea607d",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4053732f32cc811eaa3af0d5b177eca6",
+    "source": "notion-file-block://393f6d62-fb91-41f0-9a1f-7be0fbea607d/9eb79e2b-c5f3-414b-b311-0dabe33a0fe2?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=bs-mobile-home-main.jpg",
+    "originalFilename": "bs-mobile-home-main.jpg",
+    "contentFile": "src/content/cases/smartsaver-banner-launches.md",
+    "line": 56,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-banner-launches/393f6d62-fb91-41f0-9a1f-7be0fbea607d.jpg",
+    "status": "pending-issue-6",
+    "adjacentCaption": {
+      "text": "The placement and slot model, and the actual administration interface.",
+      "scope": "group",
+      "line": 58
+    }
+  },
+  {
+    "id": "695d8ade-3eda-4dd6-951a-89d667034704",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4053732f32cc811eaa3af0d5b177eca6",
+    "source": "notion-file-block://695d8ade-3eda-4dd6-951a-89d667034704/2907b72b-cdc1-4ee4-ad5a-cb808470d39c?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=bs-main-settings.jpg",
+    "originalFilename": "bs-main-settings.jpg",
+    "contentFile": "src/content/cases/smartsaver-banner-launches.md",
+    "line": 63,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-banner-launches/695d8ade-3eda-4dd6-951a-89d667034704.jpg",
+    "status": "pending-issue-6"
+  },
+  {
+    "id": "33c329f0-c09a-4277-8db7-8b8175fc71c6",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4053732f32cc811eaa3af0d5b177eca6",
+    "source": "notion-file-block://33c329f0-c09a-4277-8db7-8b8175fc71c6/8cf611ae-2023-4b5d-bb20-02961dc85090?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=bs-localisation.jpg",
+    "originalFilename": "bs-localisation.jpg",
+    "contentFile": "src/content/cases/smartsaver-banner-launches.md",
+    "line": 65,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-banner-launches/33c329f0-c09a-4277-8db7-8b8175fc71c6.jpg",
+    "status": "pending-issue-6"
+  },
+  {
+    "id": "dbf2df61-9d08-4ce6-98a4-9b5a0f33765d",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4053732f32cc811eaa3af0d5b177eca6",
+    "source": "notion-file-block://dbf2df61-9d08-4ce6-98a4-9b5a0f33765d/ee3f490b-4dec-4941-86b8-3db7b933c34b?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=bs-preview.jpg",
+    "originalFilename": "bs-preview.jpg",
+    "contentFile": "src/content/cases/smartsaver-banner-launches.md",
+    "line": 67,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-banner-launches/dbf2df61-9d08-4ce6-98a4-9b5a0f33765d.jpg",
+    "status": "pending-issue-6"
+  },
+  {
+    "id": "2cefd4e4-63b0-4c15-b871-867abdda4cac",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4053732f32cc811eaa3af0d5b177eca6",
+    "source": "notion-file-block://2cefd4e4-63b0-4c15-b871-867abdda4cac/1f539ca4-26cd-4875-9232-7acdc5cf621c?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=bs-targeting.jpg",
+    "originalFilename": "bs-targeting.jpg",
+    "contentFile": "src/content/cases/smartsaver-banner-launches.md",
+    "line": 76,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-banner-launches/2cefd4e4-63b0-4c15-b871-867abdda4cac.jpg",
+    "status": "pending-issue-6",
+    "adjacentCaption": {
+      "text": "Targeting rules added after the initial release.",
+      "scope": "image",
+      "line": 78
+    }
+  },
+  {
+    "id": "288ee332-d44a-4603-9238-a3e1451afc6b",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4053732f32cc811eaa3af0d5b177eca6",
+    "source": "notion-file-block://288ee332-d44a-4603-9238-a3e1451afc6b/c24a28ff-0404-473e-9f4a-0aa38ff8f0fd?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=banners-customer-web-summary.png",
+    "originalFilename": "banners-customer-web-summary.png",
+    "contentFile": "src/content/cases/smartsaver-banner-launches.md",
+    "line": 84,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-banner-launches/288ee332-d44a-4603-9238-a3e1451afc6b.png",
+    "status": "pending-issue-6",
+    "adjacentCaption": {
+      "text": "Banner on the web Summary page.",
+      "scope": "image",
+      "line": 86
+    }
+  },
+  {
+    "id": "3bbb6525-4af6-4026-bbf6-c4d1dc7a5a33",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4053732f32cc811eaa3af0d5b177eca6",
+    "source": "notion-file-block://3bbb6525-4af6-4026-bbf6-c4d1dc7a5a33/5ad3177e-2cbf-432d-9637-966ed24293b2?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=banners-customer-mobile-wealth.png",
+    "originalFilename": "banners-customer-mobile-wealth.png",
+    "contentFile": "src/content/cases/smartsaver-banner-launches.md",
+    "line": 89,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-banner-launches/3bbb6525-4af6-4026-bbf6-c4d1dc7a5a33.png",
+    "status": "pending-issue-6",
+    "adjacentCaption": {
+      "text": "Banner in the native app's Wealth section.",
+      "scope": "image",
+      "line": 91
+    }
+  },
+  {
+    "id": "0d2960ac-69a7-4be0-81f2-91df55c1840f",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4053732f32cc811eaa3af0d5b177eca6",
+    "source": "notion-file-block://0d2960ac-69a7-4be0-81f2-91df55c1840f/31890059-9b9a-435b-8f7a-bbcdfa413c16?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=bs-mobile-home-vault.jpg",
+    "originalFilename": "bs-mobile-home-vault.jpg",
+    "contentFile": "src/content/cases/smartsaver-banner-launches.md",
+    "line": 98,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-banner-launches/0d2960ac-69a7-4be0-81f2-91df55c1840f.jpg",
+    "status": "pending-issue-6"
+  },
+  {
+    "id": "51748009-191c-4c19-ac12-eff8462ad250",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4053732f32cc811eaa3af0d5b177eca6",
+    "source": "notion-file-block://51748009-191c-4c19-ac12-eff8462ad250/a4da1e41-9b6b-4b64-956f-622df1a3637a?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=bs-desktop-summary.jpg",
+    "originalFilename": "bs-desktop-summary.jpg",
+    "contentFile": "src/content/cases/smartsaver-banner-launches.md",
+    "line": 100,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-banner-launches/51748009-191c-4c19-ac12-eff8462ad250.jpg",
+    "status": "pending-issue-6"
+  },
+  {
+    "id": "smartsaver-banner-launches-thumbnail",
+    "kind": "thumbnail",
+    "sourcePageUrl": "https://app.notion.com/p/4053732f32cc811eaa3af0d5b177eca6",
+    "sourceProperty": "Thumbnail",
+    "source": "file://%7B%22source%22%3A%22attachment%3A30746bdc-0cf8-4762-97d9-6c7edc4cf771%3Asmartsaver-banner-system-gallery.png%22%2C%22permissionRecord%22%3A%7B%22table%22%3A%22block%22%2C%22id%22%3A%224053732f-32cc-811e-aa3a-f0d5b177eca6%22%2C%22spaceId%22%3A%2265f780ce-7ac1-4bdd-99ac-9b9c64d4ac51%22%7D%7D",
+    "originalFilename": "smartsaver-banner-system-gallery.png",
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/smartsaver-banner-launches/thumbnail-smartsaver-banner-system-gallery.png",
+    "status": "pending-issue-6"
+  },
+  {
+    "id": "904effe7-e144-4175-aa3c-b0ff5787d531",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4003732f32cc8126a78dea067c88ab5d",
+    "source": "notion-file-block://904effe7-e144-4175-aa3c-b0ff5787d531/0d76c095-9006-42d6-8abe-2bba4ef57af2?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=solid-scout.png",
+    "originalFilename": "solid-scout.png",
+    "contentFile": "src/content/cases/solid-solar-prospecting-platform.md",
+    "line": 1,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/solid-solar-prospecting-platform/904effe7-e144-4175-aa3c-b0ff5787d531.png",
+    "status": "pending-issue-6"
+  },
+  {
+    "id": "ca9749ee-5a84-4e1c-a3a3-ab00b4c2bb87",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4003732f32cc8126a78dea067c88ab5d",
+    "source": "notion-file-block://ca9749ee-5a84-4e1c-a3a3-ab00b4c2bb87/e67a7129-f2f0-4d3f-9ae2-7831d4559c47?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=solid-prospect.png",
+    "originalFilename": "solid-prospect.png",
+    "contentFile": "src/content/cases/solid-solar-prospecting-platform.md",
+    "line": 46,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/solid-solar-prospecting-platform/ca9749ee-5a84-4e1c-a3a3-ab00b4c2bb87.png",
+    "status": "pending-issue-6",
+    "adjacentCaption": {
+      "text": "Property and company details.",
+      "scope": "image",
+      "line": 48
+    }
+  },
+  {
+    "id": "6e6c107c-7ab1-45b9-963d-3127a7c32935",
+    "kind": "body",
+    "sourcePageUrl": "https://app.notion.com/p/4003732f32cc8126a78dea067c88ab5d",
+    "source": "notion-file-block://6e6c107c-7ab1-45b9-963d-3127a7c32935/6cc7d8c4-7bf3-47e8-862a-2077c533a01d?space_id=65f780ce-7ac1-4bdd-99ac-9b9c64d4ac51&name=solid-leads.png",
+    "originalFilename": "solid-leads.png",
+    "contentFile": "src/content/cases/solid-solar-prospecting-platform.md",
+    "line": 51,
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/solid-solar-prospecting-platform/6e6c107c-7ab1-45b9-963d-3127a7c32935.png",
+    "status": "pending-issue-6",
+    "adjacentCaption": {
+      "text": "The leads workspace.",
+      "scope": "image",
+      "line": 53
+    }
+  },
+  {
+    "id": "solid-solar-prospecting-platform-thumbnail",
+    "kind": "thumbnail",
+    "sourcePageUrl": "https://app.notion.com/p/4003732f32cc8126a78dea067c88ab5d",
+    "sourceProperty": "Thumbnail",
+    "source": "file://%7B%22source%22%3A%22attachment%3A506bafe4-b73c-4306-a0a4-d3252edfb597%3Asolid-solar-gallery.png%22%2C%22permissionRecord%22%3A%7B%22table%22%3A%22block%22%2C%22id%22%3A%224003732f-32cc-8126-a78d-ea067c88ab5d%22%2C%22spaceId%22%3A%2265f780ce-7ac1-4bdd-99ac-9b9c64d4ac51%22%7D%7D",
+    "originalFilename": "solid-solar-gallery.png",
+    "sourceCaption": null,
+    "intendedLocalPath": "src/assets/content/solid-solar-prospecting-platform/thumbnail-solid-solar-gallery.png",
+    "status": "pending-issue-6"
+  }
+]
