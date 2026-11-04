@@ -1,10 +1,17 @@
 import { Link } from 'react-router'
+import { PageHeader, Section } from '../components/Primitives'
 
 export default function NotFoundPage() {
   return (
     <>
-      <h1 className="mb-4 text-2xl font-semibold">Page not found</h1>
-      <Link to="/">Return home</Link>
+      <PageHeader label="404" description="This route does not exist.">
+        Page not found
+      </PageHeader>
+      <Section>
+        <Link className="text-link" to="/">
+          Return home
+        </Link>
+      </Section>
     </>
   )
 }
