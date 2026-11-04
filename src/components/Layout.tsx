@@ -1,16 +1,37 @@
-import { Link, Outlet } from 'react-router'
+import { Outlet, useLocation } from 'react-router'
+import { useEffect } from 'react'
+import SiteHeader from './SiteHeader'
+import SiteFooter from './SiteFooter'
+import { Container } from './Primitives'
 
 export default function Layout() {
+  const { pathname, hash } = useLocation()
+  useEffect(() => {
+    if (hash) {
+      const target = document.getElementById(hash.slice(1))
+      target?.scrollIntoView()
+      target?.focus({ preventScroll: true })
+    } else window.scrollTo(0, 0)
+  }, [pathname, hash])
   return (
-    <div className="mx-auto max-w-3xl p-6">
-      <header className="mb-8">
-        <nav aria-label="Main navigation">
-          <Link to="/">Home</Link>
-        </nav>
-      </header>
-      <main id="main-content">
-        <Outlet />
+    <>
+      <a
+        className="skip-link"
+        href="#main-content"
+        onClick={(event) => {
+          event.preventDefault()
+          document.getElementById('main-content')?.focus()
+        }}
+      >
+        Skip to content
+      </a>
+      <SiteHeader />
+      <main id="main-content" tabIndex={-1}>
+        <Container>
+          <Outlet />
+        </Container>
       </main>
-    </div>
+      <SiteFooter />
+    </>
   )
 }

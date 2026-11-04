@@ -1,12 +1,23 @@
 import { useParams } from 'react-router'
+import { ButtonLink, PageHeader, Section } from '../components/Primitives'
 
 export default function CaseStudyPage() {
   const { slug } = useParams()
 
   return (
     <>
-      <h1 className="mb-4 text-2xl font-semibold">Case-study placeholder</h1>
-      <p>Route slug: {slug}</p>
+      <PageHeader
+        label="Route preview / Case study"
+        description="This is a placeholder for evaluating the shared shell. The article layout and migrated content are not implemented here."
+      >
+        Case-study placeholder
+      </PageHeader>
+      <Section>
+        <p className="metadata">Route slug: {slug}</p>
+        <ButtonLink className="button-secondary" to="/">
+          Return to preview
+        </ButtonLink>
+      </Section>
     </>
   )
 }
