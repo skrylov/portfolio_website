@@ -2,6 +2,7 @@ import { Card, Section } from '../components/Primitives'
 import InlineContent from '../components/InlineContent'
 import { heroContent as hero, metricsContent } from '../content/homepageContent'
 import { ArrowUpRight } from 'lucide-react'
+import SelectedWork from '../components/SelectedWork'
 
 export default function HomePage() {
   return (
@@ -60,6 +61,7 @@ export default function HomePage() {
           ))}
         </div>
       </Section>
+      <SelectedWork />
     </>
   )
 }

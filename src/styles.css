@@ -1,6 +1,120 @@
 @import 'tailwindcss';
 
 @layer components {
+  .selected-work h2 {
+    max-width: 22ch;
+  }
+  .work-introduction {
+    max-width: 65ch;
+    color: var(--color-muted);
+    margin-block: 1.5rem 3rem;
+  }
+  .work-introduction p + p {
+    margin-top: 1rem;
+  }
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem 2rem;
+  }
+  .work-card {
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-card);
+    overflow: clip;
+  }
+  .work-card > a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    border-radius: inherit;
+  }
+  .work-card > a:focus-visible {
+    outline-offset: 5px;
+  }
+  .work-card:focus-within {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 5px;
+  }
+  .work-image {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    background: var(--color-surface);
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .work-image img {
+    position: absolute;
+    inset: 1.25rem;
+    display: block;
+    width: calc(100% - 2.5rem);
+    height: calc(100% - 2.5rem);
+    min-height: 0;
+    object-fit: contain;
+  }
+  .work-details {
+    padding: clamp(1.25rem, 3vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .work-details h3 {
+    margin-block: 1rem;
+    font-size: clamp(1.5rem, 2.1vw, 2rem);
+  }
+  .work-summary {
+    color: var(--color-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  .work-focus {
+    color: var(--color-muted);
+    font-size: 0.875rem;
+    margin-block: 1.5rem;
+  }
+  .work-action {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-top: auto;
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+    text-decoration-color: var(--color-highlight);
+  }
+  .work-card a:hover .work-action {
+    text-decoration-thickness: 2px;
+  }
+  .work-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+  .work-card:last-child:nth-child(odd) > a {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .work-card:last-child:nth-child(odd) .work-image {
+    aspect-ratio: auto;
+    min-height: 20rem;
+  }
+  @media (max-width: 48rem) {
+    .work-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .work-card:last-child:nth-child(odd) > a {
+      display: flex;
+    }
+    .work-card:last-child:nth-child(odd) .work-image {
+      aspect-ratio: 16 / 10;
+      min-height: 0;
+    }
+  }
+}
+
+@layer components {
   .portfolio-hero {
     display: grid;
     grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr);
