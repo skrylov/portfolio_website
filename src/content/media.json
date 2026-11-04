@@ -9,7 +9,16 @@
     "line": 18,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/homepage/ab1625d1-8599-4862-9e7f-f8dc71faa8ab.jpg",
-    "status": "pending-issue-6"
+    "status": "migrated",
+    "fileExists": true,
+    "localPath": "public/assets/content/homepage/ab1625d1-8599-4862-9e7f-f8dc71faa8ab.jpg",
+    "publicPath": "assets/content/homepage/ab1625d1-8599-4862-9e7f-f8dc71faa8ab.jpg",
+    "format": "jpg",
+    "width": 1117,
+    "height": 1365,
+    "byteSize": 228660,
+    "sha256": "7f09dcc7f42433fa357936dcde2087872a2d47bca127b3c4612cca7de0702aac",
+    "alt": "Portrait of Sergey Krylov standing indoors"
   },
   {
     "id": "ccdc72bc-e758-4b79-9351-97e2c1f93cf8",
@@ -21,7 +30,16 @@
     "line": 14,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/homepage/ccdc72bc-e758-4b79-9351-97e2c1f93cf8.jpg",
-    "status": "pending-issue-6"
+    "status": "migrated",
+    "fileExists": true,
+    "localPath": "public/assets/content/homepage/ccdc72bc-e758-4b79-9351-97e2c1f93cf8.jpg",
+    "publicPath": "assets/content/homepage/ccdc72bc-e758-4b79-9351-97e2c1f93cf8.jpg",
+    "format": "jpg",
+    "width": 2048,
+    "height": 1365,
+    "byteSize": 420695,
+    "sha256": "98f60491025cf842356041b17d36e19672162410e79d909708aba5d1153f98ab",
+    "alt": "Sergey Krylov seated at a desk"
   },
   {
     "id": "homepage-cover",
@@ -31,7 +49,16 @@
     "originalFilename": "Monethon01.10.2024-HarryTiits-6556.jpg",
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/homepage/cover-Monethon01.10.2024-HarryTiits-6556.jpg",
-    "status": "pending-issue-6"
+    "status": "migrated",
+    "fileExists": true,
+    "localPath": "public/assets/content/homepage/cover-Monethon01.10.2024-HarryTiits-6556.jpg",
+    "publicPath": "assets/content/homepage/cover-Monethon01.10.2024-HarryTiits-6556.jpg",
+    "format": "jpg",
+    "width": 2048,
+    "height": 871,
+    "byteSize": 181363,
+    "sha256": "be8d79e31fd8d4e5bd02862802ac857e944d943658f207f4c2abac5711eb9789",
+    "alt": "Wide photograph of Sergey Krylov seen through glass"
   },
   {
     "id": "e6705199-9340-46f9-874e-c1df1787cec0",
@@ -43,7 +70,16 @@
     "line": 1,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-native-mobile-apps/e6705199-9340-46f9-874e-c1df1787cec0.png",
-    "status": "pending-issue-6"
+    "status": "migrated",
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-native-mobile-apps/e6705199-9340-46f9-874e-c1df1787cec0.png",
+    "publicPath": "assets/content/smartsaver-native-mobile-apps/e6705199-9340-46f9-874e-c1df1787cec0.png",
+    "format": "png",
+    "width": 1000,
+    "height": 942,
+    "byteSize": 469453,
+    "sha256": "c6aff25834d7336efce5887bfae4f64e054e4171ddcba9a51ff6321d9ea3dc7a",
+    "alt": "SmartSaver mobile app promotional mockup with investment balance and payout callouts"
   },
   {
     "id": "9e047ea3-677b-4d95-8e5f-1cb929f7d186",
@@ -55,12 +91,21 @@
     "line": 43,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-native-mobile-apps/9e047ea3-677b-4d95-8e5f-1cb929f7d186.png",
-    "status": "pending-issue-6",
+    "status": "migrated",
     "adjacentCaption": {
       "text": "Wealth overview, Vault creation and investment review.",
       "scope": "group",
       "line": 53
-    }
+    },
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-native-mobile-apps/9e047ea3-677b-4d95-8e5f-1cb929f7d186.png",
+    "publicPath": "assets/content/smartsaver-native-mobile-apps/9e047ea3-677b-4d95-8e5f-1cb929f7d186.png",
+    "format": "png",
+    "width": 1080,
+    "height": 2424,
+    "byteSize": 345988,
+    "sha256": "5605b4db91242cc141f352fe2cea06657e344eafe5a141c0c9e5692493367f78",
+    "alt": "SmartSaver mobile Wealth overview with balance, banner and accounts"
   },
   {
     "id": "226c72df-9e60-47c2-a1d1-f48368ec78ca",
@@ -72,12 +117,21 @@
     "line": 46,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-native-mobile-apps/226c72df-9e60-47c2-a1d1-f48368ec78ca.png",
-    "status": "pending-issue-6",
+    "status": "migrated",
     "adjacentCaption": {
       "text": "Wealth overview, Vault creation and investment review.",
       "scope": "group",
       "line": 53
-    }
+    },
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-native-mobile-apps/226c72df-9e60-47c2-a1d1-f48368ec78ca.png",
+    "publicPath": "assets/content/smartsaver-native-mobile-apps/226c72df-9e60-47c2-a1d1-f48368ec78ca.png",
+    "format": "png",
+    "width": 1080,
+    "height": 2424,
+    "byteSize": 93386,
+    "sha256": "1b66a9cb85e0cd6f449b260e48fbd0698131cab90116edf106a0b9945baeda61",
+    "alt": "SmartSaver new Vault form with term and amount controls"
   },
   {
     "id": "95ca7fbc-044d-4de8-a1de-95dcb9e42528",
@@ -89,12 +143,21 @@
     "line": 49,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-native-mobile-apps/95ca7fbc-044d-4de8-a1de-95dcb9e42528.png",
-    "status": "pending-issue-6",
+    "status": "migrated",
     "adjacentCaption": {
       "text": "Wealth overview, Vault creation and investment review.",
       "scope": "group",
       "line": 53
-    }
+    },
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-native-mobile-apps/95ca7fbc-044d-4de8-a1de-95dcb9e42528.png",
+    "publicPath": "assets/content/smartsaver-native-mobile-apps/95ca7fbc-044d-4de8-a1de-95dcb9e42528.png",
+    "format": "png",
+    "width": 1080,
+    "height": 2424,
+    "byteSize": 96242,
+    "sha256": "fdc9f9ffef314474e611250df221b663b3ce4e6fb4b50e3812e49c1c0ed16d1d",
+    "alt": "SmartSaver investment review showing projected earnings"
   },
   {
     "id": "b997b4a2-a989-4603-9b32-065b7d0624b8",
@@ -106,7 +169,16 @@
     "line": 83,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-native-mobile-apps/b997b4a2-a989-4603-9b32-065b7d0624b8.png",
-    "status": "pending-issue-6"
+    "status": "migrated",
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-native-mobile-apps/b997b4a2-a989-4603-9b32-065b7d0624b8.png",
+    "publicPath": "assets/content/smartsaver-native-mobile-apps/b997b4a2-a989-4603-9b32-065b7d0624b8.png",
+    "format": "png",
+    "width": 1080,
+    "height": 2424,
+    "byteSize": 158532,
+    "sha256": "0908d3b9629fd92ad8e105a656139f2d03eced0dc0ce727403b61615dae3fb31",
+    "alt": "SmartSaver mobile transaction history"
   },
   {
     "id": "5991b7d0-3a6a-4140-845d-e1be5ef14384",
@@ -118,7 +190,16 @@
     "line": 86,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-native-mobile-apps/5991b7d0-3a6a-4140-845d-e1be5ef14384.png",
-    "status": "pending-issue-6"
+    "status": "migrated",
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-native-mobile-apps/5991b7d0-3a6a-4140-845d-e1be5ef14384.png",
+    "publicPath": "assets/content/smartsaver-native-mobile-apps/5991b7d0-3a6a-4140-845d-e1be5ef14384.png",
+    "format": "png",
+    "width": 1080,
+    "height": 2424,
+    "byteSize": 81028,
+    "sha256": "5236c1b0af8f76ac643576f5a1197e49e32ccf1f446f98da356383f945d08131",
+    "alt": "SmartSaver Passive Income screen with next payout and transaction history"
   },
   {
     "id": "6e8c6920-411b-4aa0-8620-8800b1a8e2dc",
@@ -130,12 +211,21 @@
     "line": 102,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-native-mobile-apps/6e8c6920-411b-4aa0-8620-8800b1a8e2dc.png",
-    "status": "pending-issue-6",
+    "status": "migrated",
     "adjacentCaption": {
       "text": "Account settings were developed after the initial scope and had not yet shipped during my involvement.",
       "scope": "image",
       "line": 104
-    }
+    },
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-native-mobile-apps/6e8c6920-411b-4aa0-8620-8800b1a8e2dc.png",
+    "publicPath": "assets/content/smartsaver-native-mobile-apps/6e8c6920-411b-4aa0-8620-8800b1a8e2dc.png",
+    "format": "png",
+    "width": 1080,
+    "height": 2424,
+    "byteSize": 133198,
+    "sha256": "b83c96d7f5f3b1a45ef1707788079aac04bede6ddf962b02fc1b65075989e9e3",
+    "alt": "SmartSaver account menu with settings and preferences"
   },
   {
     "id": "smartsaver-native-mobile-apps-thumbnail",
@@ -146,7 +236,16 @@
     "originalFilename": "smartsaver-signup-cover.webp",
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-native-mobile-apps/thumbnail-smartsaver-signup-cover.webp",
-    "status": "pending-issue-6"
+    "status": "migrated",
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-native-mobile-apps/thumbnail-smartsaver-signup-cover.webp",
+    "publicPath": "assets/content/smartsaver-native-mobile-apps/thumbnail-smartsaver-signup-cover.webp",
+    "format": "webp",
+    "width": 1000,
+    "height": 1500,
+    "byteSize": 67254,
+    "sha256": "473277cf0efe18512be5a940a350b046ccb10ca996cb33cddd517a606666165c",
+    "alt": "SmartSaver mobile app promotional cover"
   },
   {
     "id": "4003732f-32cc-80d5-9c61-e9cd3c7f746d",
@@ -158,12 +257,21 @@
     "line": 55,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-passive-income/4003732f-32cc-80d5-9c61-e9cd3c7f746d.png",
-    "status": "pending-issue-6",
+    "status": "migrated",
     "adjacentCaption": {
       "text": "Before activation: estimated monthly earnings are visible.",
       "scope": "image",
       "line": 57
-    }
+    },
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-passive-income/4003732f-32cc-80d5-9c61-e9cd3c7f746d.png",
+    "publicPath": "assets/content/smartsaver-passive-income/4003732f-32cc-80d5-9c61-e9cd3c7f746d.png",
+    "format": "png",
+    "width": 2048,
+    "height": 1145,
+    "byteSize": 320919,
+    "sha256": "9abc7f39fa18ee2ff344cb67a743bbc8d269699d391fa2c6ea958e937a3c0a10",
+    "alt": "SmartSaver web Summary before Passive Income activation"
   },
   {
     "id": "4003732f-32cc-803e-87e4-d11794ad8076",
@@ -175,12 +283,21 @@
     "line": 60,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-passive-income/4003732f-32cc-803e-87e4-d11794ad8076.png",
-    "status": "pending-issue-6",
+    "status": "migrated",
     "adjacentCaption": {
       "text": "After activation: the next payout and active status appear.",
       "scope": "image",
       "line": 62
-    }
+    },
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-passive-income/4003732f-32cc-803e-87e4-d11794ad8076.png",
+    "publicPath": "assets/content/smartsaver-passive-income/4003732f-32cc-803e-87e4-d11794ad8076.png",
+    "format": "png",
+    "width": 2048,
+    "height": 1134,
+    "byteSize": 303259,
+    "sha256": "52dc2d74e6eb1c272a7b8cc3fe6f2fc5371959a5cfaf2cb1ea20f9f5af3d6aa7",
+    "alt": "SmartSaver web Summary with Passive Income enabled"
   },
   {
     "id": "4003732f-32cc-8043-b06e-cff8852628f4",
@@ -192,12 +309,21 @@
     "line": 69,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-passive-income/4003732f-32cc-8043-b06e-cff8852628f4.png",
-    "status": "pending-issue-6",
+    "status": "migrated",
     "adjacentCaption": {
       "text": "The payout page showed the next estimated amount, payment date and destination. The Summary screens use SmartSaver's earlier UI; the dedicated page reflects the newer React design.",
       "scope": "image",
       "line": 71
-    }
+    },
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-passive-income/4003732f-32cc-8043-b06e-cff8852628f4.png",
+    "publicPath": "assets/content/smartsaver-passive-income/4003732f-32cc-8043-b06e-cff8852628f4.png",
+    "format": "png",
+    "width": 2048,
+    "height": 1228,
+    "byteSize": 180211,
+    "sha256": "a4cd9253259a80adb6ea667e89313532960a1d58d606dfda1874e2cdd623d6d0",
+    "alt": "SmartSaver Passive Income payout details and settings"
   },
   {
     "id": "smartsaver-passive-income-thumbnail",
@@ -208,7 +334,17 @@
     "originalFilename": "smartsaver-passive-income-gallery.png",
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-passive-income/thumbnail-smartsaver-passive-income-gallery.png",
-    "status": "pending-issue-6"
+    "status": "migrated",
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-passive-income/4003732f-32cc-8043-b06e-cff8852628f4.png",
+    "publicPath": "assets/content/smartsaver-passive-income/4003732f-32cc-8043-b06e-cff8852628f4.png",
+    "format": "png",
+    "width": 2048,
+    "height": 1228,
+    "byteSize": 180211,
+    "sha256": "a4cd9253259a80adb6ea667e89313532960a1d58d606dfda1874e2cdd623d6d0",
+    "deduplicatedTo": "4003732f-32cc-8043-b06e-cff8852628f4",
+    "alt": "SmartSaver Passive Income payout details and settings"
   },
   {
     "id": "d6376160-9b1a-40bf-8550-dae53998452c",
@@ -220,7 +356,16 @@
     "line": 40,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-infrastructure-for-scale/d6376160-9b1a-40bf-8550-dae53998452c.svg",
-    "status": "pending-issue-6"
+    "status": "migrated",
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-infrastructure-for-scale/d6376160-9b1a-40bf-8550-dae53998452c.svg",
+    "publicPath": "assets/content/smartsaver-infrastructure-for-scale/d6376160-9b1a-40bf-8550-dae53998452c.svg",
+    "format": "svg",
+    "width": 1000,
+    "height": 580,
+    "byteSize": 1898,
+    "sha256": "a8f2e8fd2238b98e896bb685639eb3729dcbdfa448ef634a61723fe9b5e8f380",
+    "alt": "Before Account Templates: restrictions, rates, permissions and risks"
   },
   {
     "id": "68688232-9cca-41b2-a1d9-a3a35e025326",
@@ -232,7 +377,16 @@
     "line": 49,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-infrastructure-for-scale/68688232-9cca-41b2-a1d9-a3a35e025326.svg",
-    "status": "pending-issue-6"
+    "status": "migrated",
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-infrastructure-for-scale/68688232-9cca-41b2-a1d9-a3a35e025326.svg",
+    "publicPath": "assets/content/smartsaver-infrastructure-for-scale/68688232-9cca-41b2-a1d9-a3a35e025326.svg",
+    "format": "svg",
+    "width": 1200,
+    "height": 720,
+    "byteSize": 6121,
+    "sha256": "7494bbaee6151a8dc84df35c842812b4ae4b1cd0e83f59c0031241137bbe8f2b",
+    "alt": "SmartSaver Account Templates configuration model"
   },
   {
     "id": "a8cedf2d-ea35-4a1e-855e-7562a39c4131",
@@ -244,7 +398,16 @@
     "line": 63,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-infrastructure-for-scale/a8cedf2d-ea35-4a1e-855e-7562a39c4131.svg",
-    "status": "pending-issue-6"
+    "status": "migrated",
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-infrastructure-for-scale/a8cedf2d-ea35-4a1e-855e-7562a39c4131.svg",
+    "publicPath": "assets/content/smartsaver-infrastructure-for-scale/a8cedf2d-ea35-4a1e-855e-7562a39c4131.svg",
+    "format": "svg",
+    "width": 1200,
+    "height": 720,
+    "byteSize": 4547,
+    "sha256": "ce7277ab8eafb190ca90ac2e1260ac4454a331ec952cb4ebfff0bbcad0a02ffe",
+    "alt": "Template relationships and customer acquisition diagram"
   },
   {
     "id": "c2a7d23c-3257-44b9-8d27-629f4bb3dfc1",
@@ -256,12 +419,21 @@
     "line": 69,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-infrastructure-for-scale/c2a7d23c-3257-44b9-8d27-629f4bb3dfc1.svg",
-    "status": "pending-issue-6",
+    "status": "migrated",
     "adjacentCaption": {
       "text": "The actual SmartSaver Admin interface.",
       "scope": "image",
       "line": 71
-    }
+    },
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-infrastructure-for-scale/c2a7d23c-3257-44b9-8d27-629f4bb3dfc1.svg",
+    "publicPath": "assets/content/smartsaver-infrastructure-for-scale/c2a7d23c-3257-44b9-8d27-629f4bb3dfc1.svg",
+    "format": "svg",
+    "width": 1280,
+    "height": 1048,
+    "byteSize": 104447,
+    "sha256": "e4c7c605baca63cac828e5933291cf09fe6f0e625f66e3574439d42f5af44f84",
+    "alt": "SmartSaver account template administration details"
   },
   {
     "id": "56c7765b-158f-4df0-9992-f6108047a7e1",
@@ -273,7 +445,16 @@
     "line": 76,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-infrastructure-for-scale/56c7765b-158f-4df0-9992-f6108047a7e1.svg",
-    "status": "pending-issue-6"
+    "status": "migrated",
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-infrastructure-for-scale/56c7765b-158f-4df0-9992-f6108047a7e1.svg",
+    "publicPath": "assets/content/smartsaver-infrastructure-for-scale/56c7765b-158f-4df0-9992-f6108047a7e1.svg",
+    "format": "svg",
+    "width": 1280,
+    "height": 931,
+    "byteSize": 96656,
+    "sha256": "554efa9b6b5d5a41cd1e849cae3f68e6862a4ef9a8b805d6cd49c417254feef1",
+    "alt": "SmartSaver account template features and history interface"
   },
   {
     "id": "smartsaver-infrastructure-for-scale-thumbnail",
@@ -284,7 +465,17 @@
     "originalFilename": "account-templates-configuration.svg",
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-infrastructure-for-scale/thumbnail-account-templates-configuration.svg",
-    "status": "pending-issue-6"
+    "status": "migrated",
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-infrastructure-for-scale/68688232-9cca-41b2-a1d9-a3a35e025326.svg",
+    "publicPath": "assets/content/smartsaver-infrastructure-for-scale/68688232-9cca-41b2-a1d9-a3a35e025326.svg",
+    "format": "svg",
+    "width": 1200,
+    "height": 720,
+    "byteSize": 6121,
+    "sha256": "7494bbaee6151a8dc84df35c842812b4ae4b1cd0e83f59c0031241137bbe8f2b",
+    "deduplicatedTo": "68688232-9cca-41b2-a1d9-a3a35e025326",
+    "alt": "SmartSaver Account Templates configuration model"
   },
   {
     "id": "cd7cc3fc-dfbd-4266-baa6-ee73cb680e04",
@@ -296,12 +487,21 @@
     "line": 54,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-banner-launches/cd7cc3fc-dfbd-4266-baa6-ee73cb680e04.jpg",
-    "status": "pending-issue-6",
+    "status": "migrated",
     "adjacentCaption": {
       "text": "The placement and slot model, and the actual administration interface.",
       "scope": "group",
       "line": 58
-    }
+    },
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-banner-launches/cd7cc3fc-dfbd-4266-baa6-ee73cb680e04.jpg",
+    "publicPath": "assets/content/smartsaver-banner-launches/cd7cc3fc-dfbd-4266-baa6-ee73cb680e04.jpg",
+    "format": "jpg",
+    "width": 1280,
+    "height": 772,
+    "byteSize": 41840,
+    "sha256": "f23b579405bab83bdd5880858606b907bc1aed52cdfd2e97b2ec740fcd2adf1f",
+    "alt": "Banner system products, placements and slots model"
   },
   {
     "id": "393f6d62-fb91-41f0-9a1f-7be0fbea607d",
@@ -313,12 +513,21 @@
     "line": 56,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-banner-launches/393f6d62-fb91-41f0-9a1f-7be0fbea607d.jpg",
-    "status": "pending-issue-6",
+    "status": "migrated",
     "adjacentCaption": {
       "text": "The placement and slot model, and the actual administration interface.",
       "scope": "group",
       "line": 58
-    }
+    },
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-banner-launches/393f6d62-fb91-41f0-9a1f-7be0fbea607d.jpg",
+    "publicPath": "assets/content/smartsaver-banner-launches/393f6d62-fb91-41f0-9a1f-7be0fbea607d.jpg",
+    "format": "jpg",
+    "width": 1280,
+    "height": 239,
+    "byteSize": 26852,
+    "sha256": "b9c1040b4450d0760728aa7e793e7a366374aec35d4955fa5e23dc1820e57974",
+    "alt": "Banner administration campaign list for mobile Home Main"
   },
   {
     "id": "695d8ade-3eda-4dd6-951a-89d667034704",
@@ -330,7 +539,16 @@
     "line": 63,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-banner-launches/695d8ade-3eda-4dd6-951a-89d667034704.jpg",
-    "status": "pending-issue-6"
+    "status": "migrated",
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-banner-launches/695d8ade-3eda-4dd6-951a-89d667034704.jpg",
+    "publicPath": "assets/content/smartsaver-banner-launches/695d8ade-3eda-4dd6-951a-89d667034704.jpg",
+    "format": "jpg",
+    "width": 1280,
+    "height": 266,
+    "byteSize": 18389,
+    "sha256": "0072e4abc4019081f0d0cc2128e3d2f79c6be10d3a838a28cf4de654275d2bf5",
+    "alt": "Banner campaign scheduling and main settings"
   },
   {
     "id": "33c329f0-c09a-4277-8db7-8b8175fc71c6",
@@ -342,7 +560,16 @@
     "line": 65,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-banner-launches/33c329f0-c09a-4277-8db7-8b8175fc71c6.jpg",
-    "status": "pending-issue-6"
+    "status": "migrated",
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-banner-launches/33c329f0-c09a-4277-8db7-8b8175fc71c6.jpg",
+    "publicPath": "assets/content/smartsaver-banner-launches/33c329f0-c09a-4277-8db7-8b8175fc71c6.jpg",
+    "format": "jpg",
+    "width": 1280,
+    "height": 455,
+    "byteSize": 50169,
+    "sha256": "106e2e60f80e777ee5822d7ef2c54c28b51c0c89f868d9538c12a6949b0b54f1",
+    "alt": "Banner localization with language-specific copy and images"
   },
   {
     "id": "dbf2df61-9d08-4ce6-98a4-9b5a0f33765d",
@@ -354,7 +581,16 @@
     "line": 67,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-banner-launches/dbf2df61-9d08-4ce6-98a4-9b5a0f33765d.jpg",
-    "status": "pending-issue-6"
+    "status": "migrated",
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-banner-launches/dbf2df61-9d08-4ce6-98a4-9b5a0f33765d.jpg",
+    "publicPath": "assets/content/smartsaver-banner-launches/dbf2df61-9d08-4ce6-98a4-9b5a0f33765d.jpg",
+    "format": "jpg",
+    "width": 1280,
+    "height": 742,
+    "byteSize": 51578,
+    "sha256": "d429d5f43691c3f18af9c34083975a06e1d4e11bd9074c51f0935b7f48a4b533",
+    "alt": "Banner preview with language, theme and destination controls"
   },
   {
     "id": "2cefd4e4-63b0-4c15-b871-867abdda4cac",
@@ -366,12 +602,21 @@
     "line": 76,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-banner-launches/2cefd4e4-63b0-4c15-b871-867abdda4cac.jpg",
-    "status": "pending-issue-6",
+    "status": "migrated",
     "adjacentCaption": {
       "text": "Targeting rules added after the initial release.",
       "scope": "image",
       "line": 78
-    }
+    },
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-banner-launches/2cefd4e4-63b0-4c15-b871-867abdda4cac.jpg",
+    "publicPath": "assets/content/smartsaver-banner-launches/2cefd4e4-63b0-4c15-b871-867abdda4cac.jpg",
+    "format": "jpg",
+    "width": 1280,
+    "height": 423,
+    "byteSize": 30659,
+    "sha256": "c153bd229fccd38b7be2f786c02beb43d72358aa3e37038b5816d0be4d8478a3",
+    "alt": "Banner targeting rules configuration"
   },
   {
     "id": "288ee332-d44a-4603-9238-a3e1451afc6b",
@@ -383,12 +628,22 @@
     "line": 84,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-banner-launches/288ee332-d44a-4603-9238-a3e1451afc6b.png",
-    "status": "pending-issue-6",
+    "status": "migrated",
     "adjacentCaption": {
       "text": "Banner on the web Summary page.",
       "scope": "image",
       "line": 86
-    }
+    },
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-passive-income/4003732f-32cc-803e-87e4-d11794ad8076.png",
+    "publicPath": "assets/content/smartsaver-passive-income/4003732f-32cc-803e-87e4-d11794ad8076.png",
+    "format": "png",
+    "width": 2048,
+    "height": 1134,
+    "byteSize": 303259,
+    "sha256": "52dc2d74e6eb1c272a7b8cc3fe6f2fc5371959a5cfaf2cb1ea20f9f5af3d6aa7",
+    "deduplicatedTo": "4003732f-32cc-803e-87e4-d11794ad8076",
+    "alt": "SmartSaver web Summary with Passive Income enabled"
   },
   {
     "id": "3bbb6525-4af6-4026-bbf6-c4d1dc7a5a33",
@@ -400,12 +655,22 @@
     "line": 89,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-banner-launches/3bbb6525-4af6-4026-bbf6-c4d1dc7a5a33.png",
-    "status": "pending-issue-6",
+    "status": "migrated",
     "adjacentCaption": {
       "text": "Banner in the native app's Wealth section.",
       "scope": "image",
       "line": 91
-    }
+    },
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-native-mobile-apps/9e047ea3-677b-4d95-8e5f-1cb929f7d186.png",
+    "publicPath": "assets/content/smartsaver-native-mobile-apps/9e047ea3-677b-4d95-8e5f-1cb929f7d186.png",
+    "format": "png",
+    "width": 1080,
+    "height": 2424,
+    "byteSize": 345988,
+    "sha256": "5605b4db91242cc141f352fe2cea06657e344eafe5a141c0c9e5692493367f78",
+    "deduplicatedTo": "9e047ea3-677b-4d95-8e5f-1cb929f7d186",
+    "alt": "SmartSaver mobile Wealth overview with balance, banner and accounts"
   },
   {
     "id": "0d2960ac-69a7-4be0-81f2-91df55c1840f",
@@ -417,7 +682,16 @@
     "line": 98,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-banner-launches/0d2960ac-69a7-4be0-81f2-91df55c1840f.jpg",
-    "status": "pending-issue-6"
+    "status": "migrated",
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-banner-launches/0d2960ac-69a7-4be0-81f2-91df55c1840f.jpg",
+    "publicPath": "assets/content/smartsaver-banner-launches/0d2960ac-69a7-4be0-81f2-91df55c1840f.jpg",
+    "format": "jpg",
+    "width": 1280,
+    "height": 265,
+    "byteSize": 25859,
+    "sha256": "83db89d37550abe7bb5aebfd4d752f5c3463be5fbb1629dbed02a4af0f7d21e3",
+    "alt": "Banner administration campaign list for mobile Home Vault"
   },
   {
     "id": "51748009-191c-4c19-ac12-eff8462ad250",
@@ -429,7 +703,16 @@
     "line": 100,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-banner-launches/51748009-191c-4c19-ac12-eff8462ad250.jpg",
-    "status": "pending-issue-6"
+    "status": "migrated",
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-banner-launches/51748009-191c-4c19-ac12-eff8462ad250.jpg",
+    "publicPath": "assets/content/smartsaver-banner-launches/51748009-191c-4c19-ac12-eff8462ad250.jpg",
+    "format": "jpg",
+    "width": 1280,
+    "height": 233,
+    "byteSize": 32935,
+    "sha256": "95d80e974f0bfd6fb0af5ec6aa67ccac8cbd6b5860f700e54acae11bddbeefb3",
+    "alt": "Banner administration campaign list for desktop Summary"
   },
   {
     "id": "smartsaver-banner-launches-thumbnail",
@@ -440,7 +723,17 @@
     "originalFilename": "smartsaver-banner-system-gallery.png",
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/smartsaver-banner-launches/thumbnail-smartsaver-banner-system-gallery.png",
-    "status": "pending-issue-6"
+    "status": "migrated",
+    "fileExists": true,
+    "localPath": "public/assets/content/smartsaver-passive-income/4003732f-32cc-803e-87e4-d11794ad8076.png",
+    "publicPath": "assets/content/smartsaver-passive-income/4003732f-32cc-803e-87e4-d11794ad8076.png",
+    "format": "png",
+    "width": 2048,
+    "height": 1134,
+    "byteSize": 303259,
+    "sha256": "52dc2d74e6eb1c272a7b8cc3fe6f2fc5371959a5cfaf2cb1ea20f9f5af3d6aa7",
+    "deduplicatedTo": "4003732f-32cc-803e-87e4-d11794ad8076",
+    "alt": "SmartSaver web Summary with Passive Income enabled"
   },
   {
     "id": "904effe7-e144-4175-aa3c-b0ff5787d531",
@@ -452,7 +745,16 @@
     "line": 1,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/solid-solar-prospecting-platform/904effe7-e144-4175-aa3c-b0ff5787d531.png",
-    "status": "pending-issue-6"
+    "status": "migrated",
+    "fileExists": true,
+    "localPath": "public/assets/content/solid-solar-prospecting-platform/904effe7-e144-4175-aa3c-b0ff5787d531.png",
+    "publicPath": "assets/content/solid-solar-prospecting-platform/904effe7-e144-4175-aa3c-b0ff5787d531.png",
+    "format": "png",
+    "width": 1512,
+    "height": 960,
+    "byteSize": 1252558,
+    "sha256": "8241f483382a4d15e1f8c508cfa12af5776204201aafe42deb23b24dd48398c3",
+    "alt": "SOLID Scout map and property search interface"
   },
   {
     "id": "ca9749ee-5a84-4e1c-a3a3-ab00b4c2bb87",
@@ -464,12 +766,21 @@
     "line": 46,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/solid-solar-prospecting-platform/ca9749ee-5a84-4e1c-a3a3-ab00b4c2bb87.png",
-    "status": "pending-issue-6",
+    "status": "migrated",
     "adjacentCaption": {
       "text": "Property and company details.",
       "scope": "image",
       "line": 48
-    }
+    },
+    "fileExists": true,
+    "localPath": "public/assets/content/solid-solar-prospecting-platform/ca9749ee-5a84-4e1c-a3a3-ab00b4c2bb87.png",
+    "publicPath": "assets/content/solid-solar-prospecting-platform/ca9749ee-5a84-4e1c-a3a3-ab00b4c2bb87.png",
+    "format": "png",
+    "width": 1512,
+    "height": 960,
+    "byteSize": 1351166,
+    "sha256": "3ecccce06dab498ff56b8f61d9ab6dd24f24bb3a9c4deaac1709de73b6face1a",
+    "alt": "SOLID property details with rooftop imagery and company information"
   },
   {
     "id": "6e6c107c-7ab1-45b9-963d-3127a7c32935",
@@ -481,12 +792,21 @@
     "line": 51,
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/solid-solar-prospecting-platform/6e6c107c-7ab1-45b9-963d-3127a7c32935.png",
-    "status": "pending-issue-6",
+    "status": "migrated",
     "adjacentCaption": {
       "text": "The leads workspace.",
       "scope": "image",
       "line": 53
-    }
+    },
+    "fileExists": true,
+    "localPath": "public/assets/content/solid-solar-prospecting-platform/6e6c107c-7ab1-45b9-963d-3127a7c32935.png",
+    "publicPath": "assets/content/solid-solar-prospecting-platform/6e6c107c-7ab1-45b9-963d-3127a7c32935.png",
+    "format": "png",
+    "width": 1361,
+    "height": 1600,
+    "byteSize": 272487,
+    "sha256": "c2e8fceb164c72cbec9cdbc675c71e272bb79bd22b010206233ece33d52cf0bf",
+    "alt": "SOLID leads workspace with contact cards"
   },
   {
     "id": "solid-solar-prospecting-platform-thumbnail",
@@ -497,6 +817,15 @@
     "originalFilename": "solid-solar-gallery.png",
     "sourceCaption": null,
     "intendedLocalPath": "src/assets/content/solid-solar-prospecting-platform/thumbnail-solid-solar-gallery.png",
-    "status": "pending-issue-6"
+    "status": "migrated",
+    "fileExists": true,
+    "localPath": "public/assets/content/solid-solar-prospecting-platform/thumbnail-solid-solar-gallery.png",
+    "publicPath": "assets/content/solid-solar-prospecting-platform/thumbnail-solid-solar-gallery.png",
+    "format": "png",
+    "width": 1512,
+    "height": 960,
+    "byteSize": 1277811,
+    "sha256": "be771817d53fc5dd6623980f9e5e74e699a658a235ec3816052fdbee9a32b147",
+    "alt": "SOLID Scout map promotional gallery image"
   }
 ]

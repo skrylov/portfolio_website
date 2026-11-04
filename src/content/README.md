@@ -1,5 +1,16 @@
 # Local portfolio content
 
+Issue #6 update: all 36 media references are now migrated, backed by 31 unique
+original files under `public/assets/content/`. The actual `localPath` is a
+repository path; construct future image URLs with
+`import.meta.env.BASE_URL + entry.publicPath`. `intendedLocalPath` remains the
+original inventory plan, not the migrated location. See
+[the media report](../../docs/media-migration/report.md) for the complete inventory,
+deduplication and source discrepancies. `npm run verify:media` checks the files;
+after building, add `-- --dist` to verify production copies. The pending-image
+descriptions below document the original issue #5 snapshot convention; use the
+current manifest's migration status and actual paths for implementation.
+
 This directory contains copy, metadata, and media references migrated from Notion
 for issue #5. Nothing here connects to Notion at runtime. The current React
 placeholder pages intentionally do not render this content yet.

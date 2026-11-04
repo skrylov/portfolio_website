@@ -60,6 +60,12 @@ src/
 
 ## Content snapshots
 
+All 36 media references now have local static files. See the
+[media migration report](docs/media-migration/report.md) for coverage and source
+discrepancies. Run `npm run verify:media`; after a build, run
+`npm run verify:media -- --dist` to check production copies. Future rendering uses
+`import.meta.env.BASE_URL + entry.publicPath` from the media manifest.
+
 The homepage copy, five complete case studies, eight selected testimonial
 excerpts, and pending media references live in `src/content/`. See the
 [content guide](src/content/README.md) and
