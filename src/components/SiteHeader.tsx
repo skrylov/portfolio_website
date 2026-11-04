@@ -12,7 +12,9 @@ export default function SiteHeader() {
           </Link>
           <nav aria-label="Main navigation">
             <Link to="/">Home</Link>
-            <Link to={{ pathname: '/', hash: '#metrics' }}>Key metrics</Link>
+            <Link to={{ pathname: '/', hash: '#selected-work' }}>
+              Selected Work
+            </Link>
             <Link to={{ pathname: '/', hash: '#contact' }}>Contact</Link>
             <a href="https://drive.google.com/file/d/1NwEAJ8qCJFFT4MmrZqpQ6yYTH_bhZPYE/view?usp=drive_link">
               My CV <ArrowUpRight size={14} aria-hidden="true" />
