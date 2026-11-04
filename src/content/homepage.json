@@ -1,0 +1,38 @@
+{
+  "sourceUrl": "https://app.notion.com/p/4013732f32cc81d7a35acda97dd69581",
+  "sourcePageId": "4013732f32cc81d7a35acda97dd69581",
+  "title": "Sergey Krylov | Product Portfolio",
+  "sections": [
+    {
+      "id": "hero",
+      "body": "homepage/hero.md"
+    },
+    {
+      "id": "metrics",
+      "body": "homepage/metrics.md"
+    },
+    {
+      "id": "selected-work",
+      "body": "homepage/selected-work.md"
+    },
+    {
+      "id": "about",
+      "body": "homepage/about.md"
+    },
+    {
+      "id": "recommendations",
+      "items": "testimonials.json"
+    },
+    {
+      "id": "contact",
+      "body": "homepage/contact.md"
+    }
+  ],
+  "selectedWork": {
+    "items": "cases.json",
+    "sortBy": "order",
+    "dataSourceUrl": "collection://3c59cb88-73a0-43ff-a422-33de0c998841",
+    "sourceViewUrl": "view://4013732f-32cc-8132-8b7e-000c725db5d4"
+  },
+  "coverMediaId": "homepage-cover"
+}
