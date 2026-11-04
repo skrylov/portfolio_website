@@ -4,34 +4,44 @@
   .portfolio-hero {
     display: grid;
     grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr);
-    gap: clamp(2rem, 5vw, 4rem);
+    grid-template-areas: 'title portrait' 'intro portrait' 'actions portrait';
+    column-gap: clamp(2rem, 5vw, 4rem);
     align-items: start;
-    padding-block: clamp(3rem, 6vw, 5rem);
+    padding-block: 1.5rem 3rem;
   }
-  .hero-copy h1 {
+  .hero-title {
+    grid-area: title;
+  }
+  .hero-title h1 {
     font-size: clamp(3rem, 5.2vw, 4.75rem);
     line-height: 1.08;
     letter-spacing: -0.055em;
-    margin-block: 1.5rem 2rem;
+    margin-block: 0.75rem 1rem;
   }
   .hero-introduction {
+    grid-area: intro;
     max-width: 65ch;
     font-size: 1.0625rem;
     line-height: 1.75;
     color: var(--color-muted);
   }
   .hero-introduction p + p {
-    margin-top: 1.25rem;
+    margin-top: 0.625rem;
   }
   .hero-introduction strong {
     font-weight: 600;
     color: var(--color-ink);
   }
   .hero-portrait {
+    grid-area: portrait;
     width: 100%;
     height: auto;
     border-radius: var(--radius-card);
-    margin-top: 3.5rem;
+    margin-top: 2.5rem;
+  }
+  .portfolio-hero .action-row {
+    grid-area: actions;
+    margin-top: 1.25rem;
   }
   .portfolio-hero .text-link {
     display: inline-flex;
@@ -65,19 +75,26 @@
   @media (max-width: 60rem) {
     .portfolio-hero {
       grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
-      gap: 2rem;
+      column-gap: 2rem;
     }
   }
   @media (max-width: 44rem) {
     .portfolio-hero {
       grid-template-columns: 1fr;
-      gap: 2.5rem;
+      grid-template-areas: 'title' 'portrait' 'intro' 'actions';
+      row-gap: 1.5rem;
     }
     .hero-portrait {
       max-width: 24rem;
+      height: clamp(16rem, 38svh, 20rem);
+      object-fit: cover;
+      object-position: center 30%;
       margin-top: 0;
     }
-    .hero-copy h1 {
+    .portfolio-hero .action-row {
+      margin-top: 0;
+    }
+    .hero-title h1 {
       font-size: clamp(2.75rem, 9vw, 3.75rem);
     }
   }
