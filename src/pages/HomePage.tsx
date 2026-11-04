@@ -7,28 +7,9 @@ export default function HomePage() {
   return (
     <>
       <section className="portfolio-hero" aria-labelledby="hero-heading">
-        <div className="hero-copy">
+        <div className="hero-title">
           <p className="eyebrow">{hero.eyebrow}</p>
           <h1 id="hero-heading">{hero.headline}</h1>
-          <div className="hero-introduction">
-            {hero.paragraphs.map((text, index) => (
-              <p key={index}>
-                <InlineContent text={text} />
-              </p>
-            ))}
-          </div>
-          <div className="action-row">
-            {hero.links.map((link, index) => (
-              <a
-                key={link.href}
-                className={index === 0 ? 'button' : 'text-link'}
-                href={link.href}
-              >
-                {link.label}
-                <ArrowUpRight size={16} aria-hidden="true" />
-              </a>
-            ))}
-          </div>
         </div>
         <img
           className="hero-portrait"
@@ -38,6 +19,25 @@ export default function HomePage() {
           alt={hero.portrait.alt}
           fetchPriority="high"
         />
+        <div className="hero-introduction">
+          {hero.paragraphs.map((text, index) => (
+            <p key={index}>
+              <InlineContent text={text} />
+            </p>
+          ))}
+        </div>
+        <div className="action-row">
+          {hero.links.map((link, index) => (
+            <a
+              key={link.href}
+              className={index === 0 ? 'button' : 'text-link'}
+              href={link.href}
+            >
+              {link.label}
+              <ArrowUpRight size={16} aria-hidden="true" />
+            </a>
+          ))}
+        </div>
       </section>
       <Section
         id="metrics"
