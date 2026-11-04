@@ -7,9 +7,7 @@ export default function SiteFooter() {
         <div className="footer-row">
           <div>
             <p className="wordmark">Sergey Krylov</p>
-            <p className="metadata">
-              Product management portfolio · Design preview
-            </p>
+            <p className="metadata">Product management portfolio</p>
           </div>
           <nav aria-label="Contact links">
             <a href="mailto:skrylov22@gmail.com">Email me</a>

@@ -1,5 +1,88 @@
 @import 'tailwindcss';
 
+@layer components {
+  .portfolio-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+    padding-block: clamp(3rem, 6vw, 5rem);
+  }
+  .hero-copy h1 {
+    font-size: clamp(3rem, 5.2vw, 4.75rem);
+    line-height: 1.08;
+    letter-spacing: -0.055em;
+    margin-block: 1.5rem 2rem;
+  }
+  .hero-introduction {
+    max-width: 65ch;
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: var(--color-muted);
+  }
+  .hero-introduction p + p {
+    margin-top: 1.25rem;
+  }
+  .hero-introduction strong {
+    font-weight: 600;
+    color: var(--color-ink);
+  }
+  .hero-portrait {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-card);
+    margin-top: 3.5rem;
+  }
+  .portfolio-hero .text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9375rem;
+  }
+  .homepage-metrics {
+    border-top: 1px solid var(--color-line);
+    padding-top: clamp(2.5rem, 5vw, 4rem);
+  }
+  .homepage-metrics h2 {
+    max-width: 22ch;
+  }
+  .homepage-metrics .card-surface p.metric-value {
+    font-size: clamp(2.75rem, 5vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: -0.045em;
+    color: var(--color-ink);
+    margin-bottom: 1.5rem;
+  }
+  .homepage-metrics .metric-label {
+    font-size: 1.25rem;
+    margin-block: 0 0.75rem;
+    letter-spacing: -0.02em;
+  }
+  .homepage-metrics .card-surface p.metric-description {
+    margin-bottom: 0;
+    max-width: 48ch;
+  }
+  @media (max-width: 60rem) {
+    .portfolio-hero {
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+      gap: 2rem;
+    }
+  }
+  @media (max-width: 44rem) {
+    .portfolio-hero {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .hero-portrait {
+      max-width: 24rem;
+      margin-top: 0;
+    }
+    .hero-copy h1 {
+      font-size: clamp(2.75rem, 9vw, 3.75rem);
+    }
+  }
+}
+
 @theme {
   --color-canvas: #101014;
   --color-surface: #1b1b23;
