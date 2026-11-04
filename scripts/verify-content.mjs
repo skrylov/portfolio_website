@@ -122,7 +122,7 @@ for (const image of imagesInFiles) {
   )
 }
 for (const entry of media) {
-  assert.equal(entry.status, 'pending-issue-6')
+  assert.ok(['migrated', 'missing', 'inaccessible'].includes(entry.status))
   assert.ok(entry.intendedLocalPath.startsWith('src/assets/content/'))
   if (entry.kind === 'body') {
     const text = read(entry.contentFile)
