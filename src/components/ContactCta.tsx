@@ -22,7 +22,7 @@ export default function ContactCta({
     throw new Error('Incomplete contact source')
   return (
     <Section
-      className="mx-auto mt-[clamp(1.5rem,4vw,3.5rem)] max-w-[66rem] border-t border-line"
+      className="mx-auto mt-section-block max-w-[66rem] border-t border-line"
       aria-labelledby={id}
     >
       <h2 id={id}>{heading}</h2>
