@@ -92,6 +92,30 @@ function captionAfter(
   }
 }
 
+function stackedGallery(
+  blocks: ArticleBlock[],
+  start: number,
+  images: ArticleMedia,
+) {
+  const first = blocks[start]
+  if (first.kind !== 'image') return
+  const group = images.get(first.source)?.adjacentCaption
+  if (group?.scope !== 'group') return
+
+  let end = start + 1
+  for (let next = blocks[end]; next?.kind === 'image'; next = blocks[++end]) {
+    const caption = images.get(next.source)?.adjacentCaption
+    if (caption?.scope !== 'group' || caption.line !== group.line) return
+  }
+  const caption = blocks[end]
+  if (
+    end > start + 1 &&
+    caption?.kind === 'paragraph' &&
+    caption.line === group.line
+  )
+    return { end, caption }
+}
+
 function BlockNodes({
   blocks,
   images,
@@ -102,6 +126,24 @@ function BlockNodes({
   const result: ReactNode[] = []
   for (let index = 0; index < blocks.length; index++) {
     const block = blocks[index]
+    const gallery = stackedGallery(blocks, index, images)
+    if (gallery) {
+      result.push(
+        <figure className="case-wide" key={block.line}>
+          <div className="case-flow">
+            <BlockNodes
+              blocks={blocks.slice(index, gallery.end)}
+              images={images}
+            />
+          </div>
+          <figcaption className="caption">
+            <InlineNodes content={gallery.caption.content} />
+          </figcaption>
+        </figure>,
+      )
+      index = gallery.end
+      continue
+    }
     const caption = captionAfter(block, blocks[index + 1], images)
     const figcaption = caption && (
       <figcaption className="caption">
