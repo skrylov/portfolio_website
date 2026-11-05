@@ -1,8 +1,26 @@
 import { useParams } from 'react-router'
+import CaseStudyArticle from '../components/CaseStudyArticle'
 import { ButtonLink, PageHeader, Section } from '../components/Primitives'
+import cases from '../content/cases.json'
+import NotFoundPage from './NotFoundPage'
+
+const articles = import.meta.glob(
+  '../content/cases/smartsaver-native-mobile-apps.md',
+  {
+    eager: true,
+    import: 'default',
+    query: '?raw',
+  },
+)
 
 export default function CaseStudyPage() {
   const { slug } = useParams()
+  const project = cases.find((item) => item.slug === slug)
+  if (!project) return <NotFoundPage />
+
+  const article = articles['../content/' + project.body]
+  if (typeof article === 'string')
+    return <CaseStudyArticle project={project} source={article} />
 
   return (
     <>

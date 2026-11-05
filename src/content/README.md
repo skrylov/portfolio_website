@@ -12,8 +12,9 @@ descriptions below document the original issue #5 snapshot convention; use the
 current manifest's migration status and actual paths for implementation.
 
 This directory contains copy, metadata, and media references migrated from Notion
-for issue #5. Nothing here connects to Notion at runtime. The current React
-placeholder pages intentionally do not render this content yet.
+for issue #5. Nothing here connects to Notion at runtime. Native Mobile Apps is the
+reference article for the shared case-study renderer. The other four case-study
+routes are placeholders until issue #22.
 
 ## Files
 
@@ -50,14 +51,18 @@ and empty `<p />` markers. These preserve source hierarchy, expandable content,
 grouped imagery, callout labels, and empty paragraphs without a lossy conversion.
 Metadata strings also retain Notion's Markdown escapes, such as `\~`.
 
-This is a documented source format, not MDX or ready-to-render HTML. A generic
-Markdown renderer alone will not interpret the Notion tags faithfully. A future
-rendering issue must explicitly map them to local components, resolve page
-mentions using `references.json`, bind databases to `cases.json`, and resolve
-images through `media.json`. Do not execute these tags or fetch their Notion
-URLs. No renderer, parser dependency, typography, or styling is introduced here.
-Source color/column attributes are preserved for audit fidelity, not adopted as
-website design decisions.
+The article renderer in `notionArticle.ts` parses the source into typed blocks.
+It supports the case-study headings, paragraphs, emphasis, flat lists, links,
+callouts, columns, images, toggles, mentions and separators. Containers are
+parsed recursively with matching close tags. `ArticleContent.tsx` renders these
+blocks as React elements, resolves page mentions using `references.json` and
+resolves images and caption associations through `media.json`.
+
+Unknown block tags, malformed nesting and unsafe link schemes produce a diagnostic
+with the source file and line. The parser covers the article export vocabulary.
+Tables, database embeds, arbitrary HTML and nested Markdown lists require
+explicit handling if they appear in future articles. Callout colors stay in the
+source for fidelity and the website uses the design system's surfaces.
 
 Body image `source` values are stable `notion-file-block://` identifiers, not
 expiring downloads. Thumbnail references retain Notion's stable encoded file
