@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 import { readFileSync, readdirSync } from 'node:fs'
 import { createHash } from 'node:crypto'
+import { parseNotionArticle } from '../src/content/notionArticle.ts'
 
 const read = (path) =>
   readFileSync(new URL(`../${path}`, import.meta.url), 'utf8')
@@ -156,4 +157,79 @@ for (const path of [
 }
 console.log(
   'Content verified: 5 exact articles, 5 homepage sections, 8 excerpts, 36 media references.',
+)
+
+// Exercise the renderer's source grammar against the only published article.
+const reference = cases.find(
+  (item) => item.slug === 'smartsaver-native-mobile-apps',
+)
+assert.ok(reference)
+const referenceFile = root + reference.body
+const blocks = parseNotionArticle(read(referenceFile), referenceFile)
+function flatten(blocks) {
+  return blocks.flatMap((block) => [
+    block,
+    ...(block.kind === 'columns'
+      ? block.columns.flatMap((column) => flatten(column.blocks))
+      : block.blocks
+        ? flatten(block.blocks)
+        : []),
+  ])
+}
+const parsed = flatten(blocks)
+const renderedImages = parsed.filter((block) => block.kind === 'image')
+assert.deepEqual(
+  renderedImages.map(({ source, line }) => ({ source, line })),
+  media
+    .filter((entry) => entry.contentFile === referenceFile)
+    .map(({ source, line }) => ({ source, line })),
+)
+assert.equal(parsed.filter((block) => block.kind === 'heading').length, 8)
+assert.equal(parsed.filter((block) => block.kind === 'callout').length, 3)
+assert.deepEqual(
+  parsed.filter((block) => block.kind === 'toggle').map((block) => block.label),
+  [['More screens from the mobile experience'], ['The next release']],
+)
+assert.equal(
+  parsed
+    .filter((block) => block.kind === 'list')
+    .flatMap((block) => block.items).length,
+  7,
+)
+for (const [source, diagnostic] of [
+  [
+    '<toggle>\nTitle\n<callout icon="📱">\n</toggle>',
+    /fixture:4.*unexpected block/,
+  ],
+  ['<database>\nText\n</database>', /fixture:1.*Unsupported/],
+  ['Text <script>alert(1)</script>', /fixture:1.*inline markup/],
+  ['[Example](javascript:alert(1))', /fixture:1.*Unsupported link destination/],
+]) {
+  assert.throws(() => parseNotionArticle(source, 'fixture'), diagnostic)
+}
+const [linkBlock, separator] = parseNotionArticle(
+  '<b>Text <i>[Link](https://example.com/path(a))</i></b>\n---',
+  'fixture',
+)
+assert.deepEqual(linkBlock.content, [
+  {
+    kind: 'strong',
+    children: [
+      'Text ',
+      {
+        kind: 'emphasis',
+        children: [
+          {
+            kind: 'link',
+            href: 'https://example.com/path(a)',
+            children: ['Link'],
+          },
+        ],
+      },
+    ],
+  },
+])
+assert.equal(separator.kind, 'separator')
+console.log(
+  'Native Mobile renderer verified: block counts, image order, nested markup and rejected input.',
 )
