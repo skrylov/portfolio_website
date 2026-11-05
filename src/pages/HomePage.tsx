@@ -3,6 +3,7 @@ import InlineContent from '../components/InlineContent'
 import { heroContent as hero, metricsContent } from '../content/homepageContent'
 import { ArrowUpRight } from 'lucide-react'
 import SelectedWork from '../components/SelectedWork'
+import Recommendations from '../components/Recommendations'
 import About from '../components/About'
 
 export default function HomePage() {
@@ -63,6 +64,7 @@ export default function HomePage() {
         </div>
       </Section>
       <SelectedWork />
+      <Recommendations />
       <About />
     </>
   )

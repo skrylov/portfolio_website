@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import './components/recommendations.css';
 
 @layer components {
   .selected-work h2 {
