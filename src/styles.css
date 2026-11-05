@@ -229,6 +229,28 @@
   .about-accordion p {
     padding: 0 0.25rem 1rem;
   }
+  @media (prefers-reduced-motion: no-preference) {
+    .about-accordion summary svg {
+      transition: rotate 200ms ease;
+    }
+    @supports selector(details::details-content) and
+      (transition-behavior: allow-discrete) {
+      .about-accordion details::details-content {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition:
+          grid-template-rows 230ms ease,
+          content-visibility 230ms allow-discrete;
+      }
+      .about-accordion details[open]::details-content {
+        grid-template-rows: 1fr;
+      }
+      .about-panel {
+        min-block-size: 0;
+        overflow: clip;
+      }
+    }
+  }
   .about-photo {
     grid-area: photo;
     width: 100%;

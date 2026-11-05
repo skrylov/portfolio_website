@@ -37,7 +37,9 @@ export default function About() {
                 {topic}
                 <ChevronDown size={18} aria-hidden="true" />
               </summary>
-              <p>{about.paragraphs[index]}</p>
+              <div className="about-panel">
+                <p>{about.paragraphs[index]}</p>
+              </div>
             </details>
           ))}
         </div>
