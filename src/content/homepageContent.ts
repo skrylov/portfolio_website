@@ -1,8 +1,9 @@
 import homepage from './homepage.json'
 import media from './media.json'
+import heroIntroduction from './homepage/hero-introduction.json'
 
 const files = import.meta.glob(
-  ['./homepage/hero.md', './homepage/metrics.md'],
+  ['./homepage/hero.md', './homepage/metrics.md', './homepage/about.md'],
   {
     query: '?raw',
     import: 'default',
@@ -17,8 +18,7 @@ function section(id: string) {
   return text.replace(/\r\n/g, '\n')
 }
 
-// Only the existing hero/metric export shapes are supported here. This is not
-// a general Notion or case-study renderer. Reject incomplete source extraction.
+// Extract the fields used by the homepage from its known export shapes.
 const hero = section('hero')
 const textColumn = hero.match(
   /<column ratio="60">\n([\s\S]*?)\n<\/column>/,
@@ -27,6 +27,7 @@ if (!textColumn) throw new Error('Expected hero text column')
 const blocks = textColumn.split(/\n\n+/)
 const eyebrow = blocks[0].match(/^<span[^>]*>(.*?)<\/span>$/)?.[1]
 const headline = blocks[1].match(/^# (.+)$/)?.[1]
+const location = blocks.at(-2)
 const links = [...blocks.at(-1)!.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)].map(
   (match) => ({ label: match[1], href: match[2] }),
 )
@@ -35,6 +36,7 @@ const portrait = media.find((item) => item.source === portraitSource)
 if (
   !eyebrow ||
   !headline ||
+  !location?.startsWith('<b>') ||
   links.length !== 3 ||
   !portrait ||
   portrait.status !== 'migrated'
@@ -44,7 +46,8 @@ if (
 export const heroContent = {
   eyebrow,
   headline,
-  paragraphs: blocks.slice(2, -1),
+  // Issue #11 approved this display override. The original hero remains intact.
+  paragraphs: [...heroIntroduction, location],
   links,
   portrait,
 }
@@ -59,3 +62,20 @@ const metrics = [
 if (!heading || metrics.length !== 4)
   throw new Error('Expected four source metrics')
 export const metricsContent = { heading, metrics }
+
+const about = section('about')
+const aboutHeading = about.match(/^## (.+)$/m)?.[1]
+const [aboutText, aboutImage] = [
+  ...about.matchAll(/<column ratio="[^"]+">\n([\s\S]*?)\n<\/column>/g),
+].map((match) => match[1])
+const aboutImageSource = aboutImage?.match(/<image source="([^"]+)"/)?.[1]
+const aboutPhoto = media.find((item) => item.source === aboutImageSource)
+
+if (!aboutHeading || !aboutText || aboutPhoto?.status !== 'migrated')
+  throw new Error('Incomplete About source')
+
+export const aboutContent = {
+  heading: aboutHeading,
+  paragraphs: aboutText.split(/\n\n+/),
+  photo: aboutPhoto,
+}

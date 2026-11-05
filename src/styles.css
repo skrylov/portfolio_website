@@ -118,6 +118,7 @@
   .portfolio-hero {
     display: grid;
     grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr);
+    grid-template-rows: max-content max-content 1fr;
     grid-template-areas: 'title portrait' 'intro portrait' 'actions portrait';
     column-gap: clamp(2rem, 5vw, 4rem);
     align-items: start;
@@ -186,6 +187,32 @@
     margin-bottom: 0;
     max-width: 48ch;
   }
+  .homepage-about h2 {
+    margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  .about-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(1.75rem, 5vw, 4rem);
+  }
+  .about-copy {
+    max-width: 65ch;
+  }
+  .about-copy p + p {
+    margin-top: 1rem;
+  }
+  .about-photo {
+    width: 100%;
+    max-width: 36rem;
+    height: auto;
+    border-radius: var(--radius-card);
+  }
+  @media (max-width: 48rem) {
+    .about-layout {
+      grid-template-columns: 1fr;
+    }
+  }
   @media (max-width: 60rem) {
     .portfolio-hero {
       grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
@@ -195,6 +222,7 @@
   @media (max-width: 44rem) {
     .portfolio-hero {
       grid-template-columns: 1fr;
+      grid-template-rows: none;
       grid-template-areas: 'title' 'portrait' 'intro' 'actions';
       row-gap: 1.5rem;
     }
