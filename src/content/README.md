@@ -12,9 +12,8 @@ descriptions below document the original issue #5 snapshot convention; use the
 current manifest's migration status and actual paths for implementation.
 
 This directory contains copy, metadata, and media references migrated from Notion
-for issue #5. Nothing here connects to Notion at runtime. Native Mobile Apps is the
-reference article for the shared case-study renderer. The other four case-study
-routes are placeholders until issue #22.
+for issue #5. All five case-study routes use the shared template and render
+their local Markdown without connecting to Notion at runtime.
 
 ## Files
 

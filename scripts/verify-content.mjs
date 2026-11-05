@@ -159,13 +159,6 @@ console.log(
   'Content verified: 5 exact articles, 5 homepage sections, 8 excerpts, 36 media references.',
 )
 
-// Exercise the renderer's source grammar against the only published article.
-const reference = cases.find(
-  (item) => item.slug === 'smartsaver-native-mobile-apps',
-)
-assert.ok(reference)
-const referenceFile = root + reference.body
-const blocks = parseNotionArticle(read(referenceFile), referenceFile)
 function flatten(blocks) {
   return blocks.flatMap((block) => [
     block,
@@ -176,26 +169,39 @@ function flatten(blocks) {
         : []),
   ])
 }
-const parsed = flatten(blocks)
-const renderedImages = parsed.filter((block) => block.kind === 'image')
-assert.deepEqual(
-  renderedImages.map(({ source, line }) => ({ source, line })),
-  media
-    .filter((entry) => entry.contentFile === referenceFile)
-    .map(({ source, line }) => ({ source, line })),
-)
-assert.equal(parsed.filter((block) => block.kind === 'heading').length, 8)
-assert.equal(parsed.filter((block) => block.kind === 'callout').length, 3)
-assert.deepEqual(
-  parsed.filter((block) => block.kind === 'toggle').map((block) => block.label),
-  [['More screens from the mobile experience'], ['The next release']],
-)
-assert.equal(
-  parsed
-    .filter((block) => block.kind === 'list')
-    .flatMap((block) => block.items).length,
-  7,
-)
+
+for (const { body } of cases) {
+  const file = root + body
+  const source = read(file)
+  const parsed = flatten(parseNotionArticle(source, file))
+  const ofKind = (kind) => parsed.filter((block) => block.kind === kind)
+  assert.deepEqual(
+    ofKind('image').map(({ source, line }) => ({ source, line })),
+    media
+      .filter((entry) => entry.contentFile === file)
+      .sort((a, b) => a.line - b.line)
+      .map(({ source, line }) => ({ source, line })),
+    file,
+  )
+  for (const [kind, marker] of [
+    ['heading', /^#{1,6} /gm],
+    ['callout', /^<callout /gm],
+    ['columns', /^<columns>$/gm],
+    ['toggle', /^<toggle>$/gm],
+  ]) {
+    assert.equal(
+      ofKind(kind).length,
+      [...source.matchAll(marker)].length,
+      file + ' ' + kind,
+    )
+  }
+  const items = ofKind('list').flatMap((block) => block.items)
+  assert.equal(
+    items.length,
+    [...source.matchAll(/^(?:[-+*]|\d+\.) /gm)].length,
+    file + ' list items',
+  )
+}
 for (const [source, diagnostic] of [
   [
     '<toggle>\nTitle\n<callout icon="📱">\n</toggle>',
@@ -231,5 +237,5 @@ assert.deepEqual(linkBlock.content, [
 ])
 assert.equal(separator.kind, 'separator')
 console.log(
-  'Native Mobile renderer verified: block counts, image order, nested markup and rejected input.',
+  'Case-study renderer verified: five articles, block counts, image order, nested markup and rejected input.',
 )
