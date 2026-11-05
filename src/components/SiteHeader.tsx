@@ -166,22 +166,20 @@ export default function SiteHeader() {
   const contact = { pathname, hash: '#contact' }
 
   return (
-    <header className="site-header">
-      <Container>
-        <div className="header-row">
-          <Link className="wordmark" to="/" aria-label="Sergey Krylov — home">
-            Sergey Krylov<span>Product management</span>
-          </Link>
-          <nav className="desktop-navigation" aria-label="Main navigation">
-            <NavigationLinks items={items} contact={contact} />
-          </nav>
-          <MobileNavigation
-            key={key}
-            items={[home, ...items]}
-            contact={contact}
-          />
-        </div>
-      </Container>
-    </header>
+    <>
+      <header className="site-header">
+        <Container>
+          <div className="header-row">
+            <Link className="wordmark" to="/" aria-label="Sergey Krylov — home">
+              Sergey Krylov<span>Product management</span>
+            </Link>
+            <nav className="desktop-navigation" aria-label="Main navigation">
+              <NavigationLinks items={items} contact={contact} />
+            </nav>
+          </div>
+        </Container>
+      </header>
+      <MobileNavigation key={key} items={[home, ...items]} contact={contact} />
+    </>
   )
 }
