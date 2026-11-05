@@ -1,5 +1,4 @@
 import { selectedWork } from '../content/selectedWork'
-import InlineContent from './InlineContent'
 import { Section } from './Primitives'
 import CaseStudyCard from './CaseStudyCard'
 
@@ -12,13 +11,7 @@ export default function SelectedWork() {
       className="selected-work"
     >
       <h2 id="selected-work-heading">{selectedWork.heading}</h2>
-      <div className="work-introduction">
-        {selectedWork.paragraphs.map((text, index) => (
-          <p key={index}>
-            <InlineContent text={text} />
-          </p>
-        ))}
-      </div>
+      <p className="work-introduction">{selectedWork.introduction}</p>
       <div className="work-grid">
         {selectedWork.cases.map((item) => (
           <CaseStudyCard key={item.slug} item={item} />

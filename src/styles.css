@@ -10,9 +10,6 @@
     color: var(--color-muted);
     margin-block: var(--spacing-section-heading) var(--spacing-section-block);
   }
-  .work-introduction p + p {
-    margin-top: 1rem;
-  }
   .work-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -193,16 +190,69 @@
   .about-layout {
     display: grid;
     grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    grid-template-areas: 'accordion photo';
     align-items: start;
     gap: clamp(1.75rem, 5vw, 4rem);
   }
-  .about-copy {
+  .about-accordion {
+    grid-area: accordion;
     max-width: 65ch;
+    border-top: 1px solid var(--color-line);
   }
-  .about-copy p + p {
-    margin-top: 1rem;
+  .about-accordion details {
+    border-bottom: 1px solid var(--color-line);
+  }
+  .about-accordion summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.875rem 0.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+  }
+  .about-accordion summary::-webkit-details-marker {
+    display: none;
+  }
+  .about-accordion summary:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--color-focus);
+  }
+  .about-accordion summary svg {
+    flex: none;
+    color: var(--color-focus);
+  }
+  .about-accordion details[open] summary svg {
+    rotate: 180deg;
+  }
+  .about-accordion p {
+    padding: 0 0.25rem 1rem;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .about-accordion summary svg {
+      transition: rotate 200ms ease;
+    }
+    @supports selector(details::details-content) and
+      (transition-behavior: allow-discrete) {
+      .about-accordion details::details-content {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition:
+          grid-template-rows 230ms ease,
+          content-visibility 230ms allow-discrete;
+      }
+      .about-accordion details[open]::details-content {
+        grid-template-rows: 1fr;
+      }
+      .about-panel {
+        min-block-size: 0;
+        overflow: clip;
+      }
+    }
   }
   .about-photo {
+    grid-area: photo;
     width: 100%;
     max-width: 36rem;
     height: auto;
@@ -211,6 +261,7 @@
   @media (max-width: 48rem) {
     .about-layout {
       grid-template-columns: 1fr;
+      grid-template-areas: 'photo' 'accordion';
       row-gap: var(--spacing-section-block);
     }
   }

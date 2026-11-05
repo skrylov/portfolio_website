@@ -27,7 +27,7 @@ if (!textColumn) throw new Error('Expected hero text column')
 const blocks = textColumn.split(/\n\n+/)
 const eyebrow = blocks[0].match(/^<span[^>]*>(.*?)<\/span>$/)?.[1]
 const headline = blocks[1].match(/^# (.+)$/)?.[1]
-const location = blocks.at(-2)
+const location = blocks.at(-2)?.match(/^<b>(.+)<\/b>$/)?.[1]
 const links = [...blocks.at(-1)!.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)].map(
   (match) => ({ label: match[1], href: match[2] }),
 )
@@ -36,7 +36,7 @@ const portrait = media.find((item) => item.source === portraitSource)
 if (
   !eyebrow ||
   !headline ||
-  !location?.startsWith('<b>') ||
+  !location ||
   links.length !== 3 ||
   !portrait ||
   portrait.status !== 'migrated'
@@ -47,7 +47,8 @@ export const heroContent = {
   eyebrow,
   headline,
   // Issue #11 approved this display override. The original hero remains intact.
-  paragraphs: [...heroIntroduction, location],
+  paragraphs: heroIntroduction,
+  location,
   links,
   portrait,
 }

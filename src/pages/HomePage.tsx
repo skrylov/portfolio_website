@@ -28,6 +28,7 @@ export default function HomePage() {
               <InlineContent text={text} />
             </p>
           ))}
+          <p className="metadata">{hero.location}</p>
         </div>
         <div className="action-row">
           {hero.links.map((link, index) => (

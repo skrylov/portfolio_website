@@ -1,4 +1,5 @@
-import introduction from './homepage/selected-work.md?raw'
+import source from './homepage/selected-work.md?raw'
+import introduction from './homepage/selected-work-introduction.json'
 import homepage from './homepage.json'
 import cases from './cases.json'
 import media from './media.json'
@@ -10,19 +11,12 @@ if (
 ) {
   throw new Error('Unexpected Selected Work source mapping')
 }
-const blocks = introduction.replace(/\r\n/g, '\n').split(/\n\n+/)
-const heading = blocks[0].match(/^## (.+)$/)?.[1]
+const heading = source.match(/^## (.+)$/m)?.[1]
 if (!heading) throw new Error('Missing Selected Work heading')
 export const selectedWork = {
   heading,
-  paragraphs: blocks
-    .slice(1)
-    .filter(
-      (block) =>
-        block.trim() &&
-        block.trim() !== '---' &&
-        !block.startsWith('<database '),
-    ),
+  // Issue #30 uses a shorter introduction for display and retains the audited source.
+  introduction,
   cases: [...cases]
     .sort((a, b) => a.order - b.order)
     .map((item) => {
