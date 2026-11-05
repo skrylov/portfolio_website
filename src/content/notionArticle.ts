@@ -8,7 +8,7 @@ type Column = { line: number; ratio: number; blocks: ArticleBlock[] }
 
 export type ArticleBlock = { line: number } & (
   | { kind: 'paragraph'; content: Inline[] }
-  | { kind: 'heading'; level: number; content: Inline[] }
+  | { kind: 'heading'; level: number; content: Inline[]; id?: string }
   | { kind: 'list'; start?: number; items: Inline[][] }
   | { kind: 'columns'; columns: Column[] }
   | { kind: 'callout'; icon: string; blocks: ArticleBlock[] }

@@ -5,14 +5,16 @@ import SiteFooter from './SiteFooter'
 import { Container } from './Primitives'
 
 export default function Layout() {
-  const { pathname, hash } = useLocation()
+  const { pathname, hash, key } = useLocation()
   useEffect(() => {
     if (hash) {
       const target = document.getElementById(hash.slice(1))
-      target?.scrollIntoView()
-      target?.focus({ preventScroll: true })
+      if (!target) return
+      if (!target.hasAttribute('tabindex')) target.tabIndex = -1
+      target.scrollIntoView()
+      target.focus({ preventScroll: true })
     } else window.scrollTo(0, 0)
-  }, [pathname, hash])
+  }, [pathname, hash, key])
   return (
     <>
       <a

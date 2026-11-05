@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { ArrowLeft } from 'lucide-react'
 import { Link } from 'react-router'
 import type cases from '../content/cases.json'
+import { articleHeadings, articleSections } from '../content/articleNavigation'
 import { parseNotionArticle } from '../content/notionArticle'
 import ArticleContent from './ArticleContent'
 import ContactCta from './ContactCta'
@@ -23,7 +24,14 @@ export default function CaseStudyArticle({
     }
   }, [project.project])
 
-  const blocks = parseNotionArticle(source, project.body)
+  const headings = articleHeadings[project.slug]
+  const blocks = parseNotionArticle(source, project.body).map((block) => {
+    if (block.kind !== 'heading' || block.content.length !== 1) return block
+    const section = articleSections.find(
+      (_, index) => headings?.[index] === block.content[0],
+    )
+    return section ? { ...block, id: section.id } : block
+  })
   return (
     <>
       <article className="case-article" aria-labelledby="case-heading">
