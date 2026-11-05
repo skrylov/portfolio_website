@@ -142,12 +142,20 @@
   padding: 0.75rem clamp(0.75rem, 3vw, 1.5rem) 1.5rem;
 }
 
-.case-image img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 42rem;
+.case-image .image-trigger {
+  --image-height-limit: 42rem;
+  width: min(
+    100%,
+    var(--image-width),
+    calc(var(--image-height-limit) * var(--image-ratio))
+  );
   margin-inline: auto;
+}
+
+.case-image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: var(--image-ratio);
   object-fit: contain;
 }
 
@@ -167,7 +175,29 @@
     gap: 1.25rem;
   }
 
-  .case-image img {
-    max-height: 38rem;
+  .case-gallery {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    gap: 0.75rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-muted) transparent;
+    padding-bottom: 0.375rem;
+  }
+
+  .case-gallery > * {
+    min-width: 0;
+    margin-top: 0;
+    scroll-snap-align: start;
+  }
+
+  .case-gallery .image-trigger:focus-visible {
+    outline-offset: -3px;
+  }
+
+  .case-image .image-trigger {
+    --image-height-limit: 38rem;
   }
 }

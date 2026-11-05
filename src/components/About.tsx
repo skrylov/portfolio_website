@@ -1,6 +1,7 @@
 import { ChevronDown } from 'lucide-react'
 import { aboutContent as about } from '../content/homepageContent'
 import { Section } from './Primitives'
+import ZoomableImage from './ZoomableImage'
 
 const topics = [
   'My path into product',
@@ -21,14 +22,10 @@ export default function About() {
     >
       <h2 id="about-heading">{about.heading}</h2>
       <div className="about-layout">
-        <img
+        <ZoomableImage
           className="about-photo"
-          src={import.meta.env.BASE_URL + about.photo.publicPath}
-          alt={about.photo.alt}
-          width={about.photo.width}
-          height={about.photo.height}
+          image={about.photo}
           loading="lazy"
-          decoding="async"
         />
         <div className="about-accordion">
           {topics.map((topic, index) => (

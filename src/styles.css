@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import './components/recommendations.css';
+@import './components/image-lightbox.css';
 
 @layer components {
   .selected-work h2 {
@@ -148,9 +149,13 @@
   .hero-portrait {
     grid-area: portrait;
     width: 100%;
+    margin-top: 2.5rem;
+  }
+  .hero-portrait img,
+  .about-photo img {
+    width: 100%;
     height: auto;
     border-radius: var(--radius-card);
-    margin-top: 2.5rem;
   }
   .portfolio-hero .action-row {
     grid-area: actions;
@@ -255,8 +260,6 @@
     grid-area: photo;
     width: 100%;
     max-width: 36rem;
-    height: auto;
-    border-radius: var(--radius-card);
   }
   @media (max-width: 48rem) {
     .about-layout {
@@ -280,10 +283,12 @@
     }
     .hero-portrait {
       max-width: 24rem;
+      margin-top: 0;
+    }
+    .hero-portrait img {
       height: clamp(16rem, 38svh, 20rem);
       object-fit: cover;
       object-position: center 30%;
-      margin-top: 0;
     }
     .portfolio-hero .action-row {
       margin-top: 0;

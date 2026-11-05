@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import type { ArticleBlock, Inline } from '../content/notionArticle'
 import media from '../content/media.json'
 import references from '../content/references.json'
+import ZoomableImage, { type LightboxImage } from './ZoomableImage'
 
 type Media = (typeof media)[number]
 type ArticleMedia = Map<string, Media>
@@ -53,21 +54,57 @@ function InlineNodes({ content }: { content: Inline[] }) {
   })
 }
 
-function ArticleImage({ entry }: { entry: Media }) {
-  if (entry.status !== 'migrated' || !entry.publicPath)
-    throw new Error('Missing local case-study image: ' + entry.id)
-  return (
-    <img
-      src={import.meta.env.BASE_URL + entry.publicPath}
-      alt={entry.alt}
-      width={entry.width}
-      height={entry.height}
-      loading={entry.line === 1 ? 'eager' : 'lazy'}
-      decoding="async"
-    />
-  )
+type ImageBlock = Extract<ArticleBlock, { kind: 'image' }>
+type CaptionBlock = Extract<ArticleBlock, { kind: 'paragraph' }>
+
+function toSlide(
+  block: ImageBlock,
+  images: ArticleMedia,
+  caption?: CaptionBlock,
+): LightboxImage {
+  const entry = images.get(block.source)
+  if (!entry || entry.status !== 'migrated' || !entry.publicPath)
+    throw new Error('Missing local case-study image at line ' + block.line)
+  return {
+    publicPath: entry.publicPath,
+    width: entry.width,
+    height: entry.height,
+    alt: entry.alt,
+    caption: (entry.sourceCaption || caption) && (
+      <>
+        {entry.sourceCaption && <p>{entry.sourceCaption}</p>}
+        {caption && <InlineNodes content={caption.content} />}
+      </>
+    ),
+  }
 }
 
+function ArticleFigure({
+  group,
+  index,
+  groupCaption,
+  eager,
+}: {
+  group: LightboxImage[]
+  index: number
+  groupCaption?: ReactNode
+  eager?: boolean
+}) {
+  const image = group[index]
+  return (
+    <figure className="case-wide case-image">
+      <ZoomableImage
+        image={image}
+        group={group}
+        groupCaption={groupCaption}
+        loading={eager ? 'eager' : 'lazy'}
+      />
+      {image.caption && (
+        <figcaption className="caption">{image.caption}</figcaption>
+      )}
+    </figure>
+  )
+}
 function captionAfter(
   block: ArticleBlock,
   next: ArticleBlock | undefined,
@@ -92,30 +129,24 @@ function captionAfter(
   }
 }
 
-function stackedGallery(
-  blocks: ArticleBlock[],
-  start: number,
-  images: ArticleMedia,
-) {
-  const first = blocks[start]
-  if (first.kind !== 'image') return
-  const group = images.get(first.source)?.adjacentCaption
-  if (group?.scope !== 'group') return
-
-  let end = start + 1
-  for (let next = blocks[end]; next?.kind === 'image'; next = blocks[++end]) {
-    const caption = images.get(next.source)?.adjacentCaption
-    if (caption?.scope !== 'group' || caption.line !== group.line) return
+function imageRun(blocks: ArticleBlock[], start: number, images: ArticleMedia) {
+  const group: LightboxImage[] = []
+  const lines: number[] = []
+  let captionLine: number | undefined
+  let end = start
+  for (let block = blocks[end]; block?.kind === 'image'; block = blocks[end]) {
+    const next = captionAfter(block, blocks[end + 1], images)
+    const caption = images.get(block.source)?.adjacentCaption
+    if (caption?.scope === 'group') captionLine = caption.line
+    group.push(toSlide(block, images, next))
+    lines.push(block.line)
+    end += next ? 2 : 1
   }
-  const caption = blocks[end]
-  if (
-    end > start + 1 &&
-    caption?.kind === 'paragraph' &&
-    caption.line === group.line
-  )
-    return { end, caption }
+  const next = blocks[end]
+  const caption =
+    next?.kind === 'paragraph' && next.line === captionLine ? next : undefined
+  return { group, lines, end: caption ? end + 1 : end, caption }
 }
-
 function BlockNodes({
   blocks,
   images,
@@ -126,22 +157,46 @@ function BlockNodes({
   const result: ReactNode[] = []
   for (let index = 0; index < blocks.length; index++) {
     const block = blocks[index]
-    const gallery = stackedGallery(blocks, index, images)
-    if (gallery) {
-      result.push(
-        <figure className="case-wide" key={block.line}>
-          <div className="case-flow">
-            <BlockNodes
-              blocks={blocks.slice(index, gallery.end)}
-              images={images}
-            />
-          </div>
-          <figcaption className="caption">
-            <InlineNodes content={gallery.caption.content} />
-          </figcaption>
-        </figure>,
-      )
-      index = gallery.end
+    if (block.kind === 'image') {
+      const { group, lines, end, caption } = imageRun(blocks, index, images)
+      if (group.length === 1) {
+        result.push(
+          <ArticleFigure
+            key={block.line}
+            group={group}
+            index={0}
+            eager={block.line === 1}
+          />,
+        )
+      } else {
+        const Gallery = caption ? 'figure' : 'div'
+        const groupCaption = caption && (
+          <InlineNodes content={caption.content} />
+        )
+        result.push(
+          <Gallery className="case-wide" key={block.line}>
+            <div
+              className="case-flow case-gallery"
+              role="group"
+              aria-label="Image gallery"
+            >
+              {lines.map((line, index) => (
+                <ArticleFigure
+                  key={line}
+                  group={group}
+                  index={index}
+                  groupCaption={groupCaption}
+                  eager={line === 1}
+                />
+              ))}
+            </div>
+            {groupCaption && (
+              <figcaption className="caption">{groupCaption}</figcaption>
+            )}
+          </Gallery>,
+        )
+      }
+      index = end - 1
       continue
     }
     const caption = captionAfter(block, blocks[index + 1], images)
@@ -197,34 +252,43 @@ function BlockNodes({
         break
       case 'columns': {
         const Columns = caption ? 'figure' : 'div'
+        const slides = block.columns.map(({ blocks }) => {
+          const [first, next] = blocks
+          if (first?.kind !== 'image') return
+          const caption = captionAfter(first, next, images)
+          if (blocks.length === (caption ? 2 : 1))
+            return toSlide(first, images, caption)
+        })
+        const group =
+          slides.length > 1 && slides.every((slide) => slide !== undefined)
+            ? slides
+            : undefined
+        const groupCaption = caption && (
+          <InlineNodes content={caption.content} />
+        )
         rendered = (
           <Columns className="case-wide">
-            <div className="case-columns">
-              {block.columns.map(({ line, ratio, blocks }) => (
+            <div
+              className={group ? 'case-columns case-gallery' : 'case-columns'}
+              role={group ? 'group' : undefined}
+              aria-label={group ? 'Image gallery' : undefined}
+            >
+              {block.columns.map(({ line, ratio, blocks }, index) => (
                 <div className="case-flow" key={line} style={{ flex: ratio }}>
-                  <BlockNodes blocks={blocks} images={images} />
+                  {group ? (
+                    <ArticleFigure
+                      group={group}
+                      index={index}
+                      groupCaption={groupCaption}
+                    />
+                  ) : (
+                    <BlockNodes blocks={blocks} images={images} />
+                  )}
                 </div>
               ))}
             </div>
             {figcaption}
           </Columns>
-        )
-        break
-      }
-      case 'image': {
-        const entry = images.get(block.source)
-        if (!entry)
-          throw new Error('Unmapped case-study image at line ' + block.line)
-        rendered = (
-          <figure className="case-wide case-image">
-            <ArticleImage entry={entry} />
-            {(entry.sourceCaption || caption) && (
-              <figcaption className="caption">
-                {entry.sourceCaption && <p>{entry.sourceCaption}</p>}
-                {caption && <InlineNodes content={caption.content} />}
-              </figcaption>
-            )}
-          </figure>
         )
         break
       }

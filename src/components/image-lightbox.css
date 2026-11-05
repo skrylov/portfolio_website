@@ -1,0 +1,127 @@
+@layer components {
+  .image-trigger {
+    position: relative;
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    cursor: zoom-in;
+  }
+
+  .image-enlarge-icon {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    display: grid;
+    place-items: center;
+    width: 1.875rem;
+    height: 1.875rem;
+    border: 1px solid var(--color-line);
+    border-radius: 0.375rem;
+    background: var(--color-canvas);
+    color: var(--color-ink);
+  }
+
+  html:has(.image-lightbox[open]) {
+    overflow: hidden;
+    scrollbar-gutter: stable;
+  }
+
+  .image-lightbox {
+    position: fixed;
+    inset: 0;
+    width: min(80rem, 100% - 1rem);
+    height: min(60rem, 100dvh - 1rem);
+    max-width: none;
+    max-height: none;
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-card);
+    background: var(--color-canvas);
+    color: var(--color-ink);
+  }
+
+  .image-lightbox::backdrop {
+    background: rgb(0 0 0 / 85%);
+  }
+
+  .lightbox-layout {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    height: 100%;
+  }
+
+  .lightbox-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.25rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .lightbox-controls {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  .lightbox-toolbar button {
+    display: grid;
+    place-items: center;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    border-radius: 0.375rem;
+    background: var(--color-surface);
+    color: var(--color-ink);
+    font-size: 0.875rem;
+    cursor: pointer;
+  }
+
+  .lightbox-toolbar button:hover {
+    background: var(--color-accent);
+  }
+
+  .lightbox-toolbar button[aria-disabled='true'] {
+    background: transparent;
+    color: var(--color-muted);
+    cursor: default;
+  }
+
+  .lightbox-viewport {
+    overflow: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: none;
+    touch-action: none;
+    cursor: grab;
+  }
+
+  .lightbox-viewport:active {
+    cursor: grabbing;
+  }
+
+  .lightbox-viewport:focus-visible {
+    outline-offset: -3px;
+  }
+
+  .lightbox-canvas {
+    display: grid;
+    place-items: center;
+    width: max-content;
+    height: max-content;
+    min-width: 100%;
+    min-height: 100%;
+    user-select: none;
+  }
+
+  .lightbox-canvas img {
+    max-width: none;
+  }
+
+  .lightbox-caption {
+    max-height: 25dvh;
+    overflow: auto;
+    padding: 0.5rem 1rem;
+    border-top: 1px solid var(--color-line);
+    text-align: center;
+  }
+}
