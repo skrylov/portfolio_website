@@ -59,7 +59,7 @@ The inventory includes 30 body images (including every image inside the seven to
 
 ## Source discrepancies retained
 
-Some source labels do not describe the retrieved binary precisely. In particular, smartsaver-transactions.png shows investment review, smartsaver-investment-review.png shows transaction history, and the Banner web Summary image/thumbnail is identical to a Passive Income Summary image. The Banner mobile Wealth image is identical to the native Wealth screenshot. These are exact source files, not substitutions. Existing relationships and captions were preserved for owner review; alt text describes the actual image. Some JPEG screenshots are small in the source (for example 1280 × 233); they were not enlarged or recompressed.
+Some source filenames do not describe the image contents. The issue #32 audit confirmed that `smartsaver-transactions.png` shows investment review, `smartsaver-passive-income.png` shows transaction history, and `smartsaver-investment-review.png` shows Passive Income with payout inactive. The Banner web Summary image and thumbnail share the Passive Income Summary file, which also shows the app-launch banner. The Banner mobile Wealth image shares the Native Mobile Wealth file, which shows the Auto Invest banner. Fresh Notion downloads matched the stored hashes. The original files, relationships and captions are intact. Some source JPEGs are small (for example 1280 × 233).
 
 ## Remaining work
 

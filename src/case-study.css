@@ -162,6 +162,26 @@
 }
 
 @media (max-width: 44rem) {
+  .case-article {
+    padding-top: var(--spacing-section-heading);
+  }
+
+  .case-header {
+    margin-bottom: var(--spacing-section-heading);
+  }
+
+  .case-back {
+    margin-bottom: 0.75rem;
+  }
+
+  .case-header h1 {
+    margin-block: 0.5rem 0.75rem;
+  }
+
+  .case-focus {
+    margin-top: 0.75rem;
+  }
+
   .case-columns {
     flex-direction: column;
     gap: 1.25rem;
