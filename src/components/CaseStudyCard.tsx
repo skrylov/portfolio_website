@@ -8,14 +8,9 @@ export default function CaseStudyCard({
 }: {
   item: (typeof selectedWork.cases)[number]
 }) {
-  const titleId = `work-${item.slug}`
-  const actionId = `${titleId}-action`
   return (
     <article className="work-card">
-      <Link
-        to={`/work/${item.slug}`}
-        aria-labelledby={`${titleId} ${actionId}`}
-      >
+      <Link to={`/work/${item.slug}`}>
         <div className="work-image">
           <img
             src={import.meta.env.BASE_URL + item.thumbnail.publicPath}
@@ -27,14 +22,14 @@ export default function CaseStudyCard({
         </div>
         <div className="work-details">
           <p className="eyebrow">{item.category}</p>
-          <h3 id={titleId}>{item.project}</h3>
+          <h3>{item.project}</h3>
           <p className="work-summary">
             <InlineContent text={item.summary} />
           </p>
           <p className="work-focus">
             <InlineContent text={item.focus} />
           </p>
-          <span className="work-action" id={actionId}>
+          <span className="work-action">
             Read case study <ArrowUpRight size={18} aria-hidden="true" />
           </span>
         </div>

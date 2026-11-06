@@ -1,6 +1,7 @@
 import { selectedWork } from '../content/selectedWork'
 import CaseStudyCard from './CaseStudyCard'
 import { Section } from './Primitives'
+import { revealFocusedSlide } from './revealFocusedSlide'
 
 const mobile = 'smartsaver-native-mobile-apps'
 const passiveIncome = 'smartsaver-passive-income'
@@ -26,17 +27,7 @@ export default function RelatedWork({ slug }: { slug: string }) {
       aria-labelledby="related-work-heading"
     >
       <h2 id="related-work-heading">Explore more work</h2>
-      <div
-        className="work-grid"
-        onFocus={({ currentTarget, target }) => {
-          if (
-            target.matches(':focus-visible') &&
-            currentTarget.scrollWidth > currentTarget.clientWidth
-          ) {
-            target.scrollIntoView({ block: 'nearest', inline: 'nearest' })
-          }
-        }}
-      >
+      <div className="work-grid" onFocus={revealFocusedSlide}>
         {relatedCases[slug].map((relatedSlug) => {
           const item = selectedWork.cases.find(
             (entry) => entry.slug === relatedSlug,

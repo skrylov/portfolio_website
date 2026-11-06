@@ -170,7 +170,7 @@ export default function SiteHeader() {
       <header className="site-header">
         <Container>
           <div className="header-row">
-            <Link className="wordmark" to="/" aria-label="Sergey Krylov — home">
+            <Link className="wordmark" to="/">
               Sergey Krylov<span>Product management</span>
             </Link>
             <nav className="desktop-navigation" aria-label="Main navigation">
