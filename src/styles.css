@@ -16,6 +16,10 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 3rem 2rem;
   }
+  .related-work .work-grid {
+    margin-top: var(--spacing-section-heading);
+    gap: var(--spacing-section-heading);
+  }
   .work-card {
     border: 1px solid var(--color-line);
     border-radius: var(--radius-card);
@@ -99,7 +103,7 @@
     min-height: 20rem;
   }
   @media (max-width: 48rem) {
-    .work-grid {
+    .selected-work .work-grid {
       grid-template-columns: 1fr;
       gap: 2rem;
     }
@@ -109,6 +113,29 @@
     .work-card:last-child:nth-child(odd) .work-image {
       aspect-ratio: 16 / 10;
       min-height: 0;
+    }
+  }
+  @media (max-width: 44rem) {
+    .related-work .work-grid {
+      --work-gap: 0.75rem;
+      --focus-gutter: 0.5rem;
+      grid-template-columns: none;
+      grid-auto-flow: column;
+      grid-auto-columns: calc(89% - var(--work-gap));
+      gap: var(--work-gap);
+      padding: var(--focus-gutter);
+      overflow-x: auto;
+      scroll-padding-inline: var(--focus-gutter);
+      scroll-snap-type: x mandatory;
+      scrollbar-width: thin;
+      scrollbar-color: var(--color-muted) transparent;
+    }
+    .related-work .work-card {
+      min-width: 0;
+      scroll-snap-align: start;
+    }
+    .related-work .work-card:last-child {
+      scroll-snap-align: end;
     }
   }
 }
