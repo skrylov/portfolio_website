@@ -1,6 +1,10 @@
 import assert from 'node:assert/strict'
 import { readFileSync, readdirSync } from 'node:fs'
 import { createHash } from 'node:crypto'
+import {
+  articleHeadings,
+  articleSections,
+} from '../src/content/articleNavigation.ts'
 import { parseNotionArticle } from '../src/content/notionArticle.ts'
 
 const read = (path) =>
@@ -170,10 +174,25 @@ function flatten(blocks) {
   ])
 }
 
-for (const { body } of cases) {
+for (const { body, slug } of cases) {
   const file = root + body
   const source = read(file)
-  const parsed = flatten(parseNotionArticle(source, file))
+  const blocks = parseNotionArticle(source, file)
+  const navigation = articleHeadings[slug]
+  assert.equal(navigation?.length, articleSections.length, file + ' navigation')
+  for (const heading of navigation) {
+    assert.equal(
+      blocks.filter(
+        (block) =>
+          block.kind === 'heading' &&
+          block.content.length === 1 &&
+          block.content[0] === heading,
+      ).length,
+      1,
+      file + ' navigation heading: ' + heading,
+    )
+  }
+  const parsed = flatten(blocks)
   const ofKind = (kind) => parsed.filter((block) => block.kind === kind)
   assert.deepEqual(
     ofKind('image').map(({ source, line }) => ({ source, line })),

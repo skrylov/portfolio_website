@@ -219,7 +219,7 @@ function BlockNodes({
       case 'heading': {
         const Heading = ('h' + block.level) as 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
         rendered = (
-          <Heading>
+          <Heading id={block.id}>
             <InlineNodes content={block.content} />
           </Heading>
         )
