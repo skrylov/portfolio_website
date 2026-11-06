@@ -62,7 +62,7 @@
   }
 
   .recommendation-mark {
-    color: var(--color-focus);
+    color: var(--color-muted);
   }
 
   .recommendation-card figcaption {
