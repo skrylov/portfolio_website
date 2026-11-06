@@ -188,6 +188,12 @@
     grid-area: actions;
     margin-top: 1.25rem;
   }
+  @media (min-width: 56rem) {
+    .portfolio-hero .action-row {
+      align-self: end;
+      margin-bottom: 1.5rem;
+    }
+  }
   .portfolio-hero .text-link {
     display: inline-flex;
     align-items: center;
