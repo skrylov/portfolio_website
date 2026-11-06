@@ -20,12 +20,13 @@ function scrollToAnchor(target: HTMLElement, smooth: boolean) {
   const destination = start + target.getBoundingClientRect().top - offset
   const max = document.documentElement.scrollHeight - window.innerHeight
   const end = Math.max(0, Math.min(destination, max))
-  if (Math.abs(end - start) < 1) {
+  const distance = Math.abs(end - start)
+  if (distance < 1) {
     align()
     return
   }
 
-  const duration = 300
+  const duration = Math.min(650, 400 + distance / 8)
   const startedAt = performance.now()
   const listeners = new AbortController()
   let frame = 0
@@ -40,7 +41,7 @@ function scrollToAnchor(target: HTMLElement, smooth: boolean) {
       stop()
       return
     }
-    const eased = progress * progress * (3 - 2 * progress)
+    const eased = (1 - Math.cos(Math.PI * progress)) / 2
     window.scrollTo({ top: start + (end - start) * eased, behavior: 'instant' })
     frame = requestAnimationFrame(tick)
   }

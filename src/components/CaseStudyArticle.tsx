@@ -7,6 +7,7 @@ import { parseNotionArticle } from '../content/notionArticle'
 import ArticleContent from './ArticleContent'
 import ContactCta from './ContactCta'
 import InlineContent from './InlineContent'
+import RelatedWork from './RelatedWork'
 import '../case-study.css'
 
 export default function CaseStudyArticle({
@@ -56,6 +57,7 @@ export default function CaseStudyArticle({
         </header>
         <ArticleContent blocks={blocks} body={project.body} />
       </article>
+      <RelatedWork slug={project.slug} />
       <ContactCta />
     </>
   )
