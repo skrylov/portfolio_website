@@ -5,6 +5,7 @@ import { ArrowUpRight } from 'lucide-react'
 import SelectedWork from '../components/SelectedWork'
 import Recommendations from '../components/Recommendations'
 import About from '../components/About'
+import ZoomableImage from '../components/ZoomableImage'
 
 export default function HomePage() {
   return (
@@ -14,12 +15,9 @@ export default function HomePage() {
           <p className="eyebrow">{hero.eyebrow}</p>
           <h1 id="hero-heading">{hero.headline}</h1>
         </div>
-        <img
+        <ZoomableImage
           className="hero-portrait"
-          src={import.meta.env.BASE_URL + hero.portrait.publicPath}
-          width={hero.portrait.width}
-          height={hero.portrait.height}
-          alt={hero.portrait.alt}
+          image={hero.portrait}
           fetchPriority="high"
         />
         <div className="hero-introduction">
