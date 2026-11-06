@@ -1,4 +1,4 @@
-import { Fragment, type ReactNode } from 'react'
+import { Fragment, type CSSProperties, type ReactNode } from 'react'
 import { Link } from 'react-router'
 import type { ArticleBlock, Inline } from '../content/notionArticle'
 import media from '../content/media.json'
@@ -91,8 +91,18 @@ function ArticleFigure({
   eager?: boolean
 }) {
   const image = group[index]
+  // Large landscape media can use the wider rail when it is a top-level figure.
+  const isWide = image.width >= 960 && image.width >= 1.5 * image.height
   return (
-    <figure className="case-wide case-image">
+    <figure
+      className={isWide ? 'case-image case-image-wide' : 'case-image'}
+      style={
+        {
+          width: image.width,
+          '--case-image-ratio': image.width / image.height,
+        } as CSSProperties
+      }
+    >
       <ZoomableImage
         image={image}
         group={group}
@@ -174,20 +184,21 @@ function BlockNodes({
           <InlineNodes content={caption.content} />
         )
         result.push(
-          <Gallery className="case-wide" key={block.line}>
+          <Gallery className="case-group" key={block.line}>
             <div
               className="case-flow case-gallery"
               role="group"
               aria-label="Image gallery"
             >
               {lines.map((line, index) => (
-                <ArticleFigure
-                  key={line}
-                  group={group}
-                  index={index}
-                  groupCaption={groupCaption}
-                  eager={line === 1}
-                />
+                <div key={line}>
+                  <ArticleFigure
+                    group={group}
+                    index={index}
+                    groupCaption={groupCaption}
+                    eager={line === 1}
+                  />
+                </div>
               ))}
             </div>
             {groupCaption && (
@@ -267,7 +278,7 @@ function BlockNodes({
           <InlineNodes content={caption.content} />
         )
         rendered = (
-          <Columns className="case-wide">
+          <Columns className="case-group">
             <div
               className={group ? 'case-columns case-gallery' : 'case-columns'}
               role={group ? 'group' : undefined}
