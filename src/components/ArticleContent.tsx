@@ -4,6 +4,7 @@ import type { ArticleBlock, Inline } from '../content/notionArticle'
 import media from '../content/media.json'
 import references from '../content/references.json'
 import ZoomableImage, { type LightboxImage } from './ZoomableImage'
+import { revealFocusedSlide } from './revealFocusedSlide'
 
 type Media = (typeof media)[number]
 type ArticleMedia = Map<string, Media>
@@ -189,6 +190,7 @@ function BlockNodes({
               className="case-flow case-gallery"
               role="group"
               aria-label="Image gallery"
+              onFocus={revealFocusedSlide}
             >
               {lines.map((line, index) => (
                 <div key={line}>
@@ -283,6 +285,7 @@ function BlockNodes({
               className={group ? 'case-columns case-gallery' : 'case-columns'}
               role={group ? 'group' : undefined}
               aria-label={group ? 'Image gallery' : undefined}
+              onFocus={group ? revealFocusedSlide : undefined}
             >
               {block.columns.map(({ line, ratio, blocks }, index) => (
                 <div className="case-flow" key={line} style={{ flex: ratio }}>
