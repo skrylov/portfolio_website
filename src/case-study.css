@@ -67,7 +67,7 @@
 }
 
 .case-content .text-link {
-  text-decoration-color: var(--color-focus);
+  text-decoration-color: var(--color-highlight);
 }
 
 .case-flow ul,
@@ -135,12 +135,12 @@
 }
 
 .case-toggle summary::marker {
-  color: var(--color-focus);
+  color: var(--color-muted);
 }
 
 .case-toggle summary:hover {
   text-decoration: underline;
-  text-decoration-color: var(--color-focus);
+  text-decoration-color: var(--color-highlight);
 }
 
 .case-toggle > .case-flow {

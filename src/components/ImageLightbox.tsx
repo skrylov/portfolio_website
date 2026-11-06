@@ -257,6 +257,10 @@ export default function ImageLightbox({
                 >
                   <ChevronRight size={20} aria-hidden="true" />
                 </button>
+                <span className="lightbox-position" role="status">
+                  {index + 1} / {images.length}
+                  <span className="sr-only"> · {image.alt}</span>
+                </span>
               </>
             )}
           </div>
@@ -311,14 +315,12 @@ export default function ImageLightbox({
             />
           </div>
         </div>
-        <div className="lightbox-caption caption">
-          <p role="status">
-            {images.length > 1 ? `${index + 1} / ${images.length} · ` : ''}
-            {image.alt}
-          </p>
-          {image.caption}
-          {groupCaption}
-        </div>
+        {(image.caption || groupCaption) && (
+          <div className="lightbox-caption caption">
+            {image.caption}
+            {groupCaption}
+          </div>
+        )}
       </div>
     </dialog>,
     document.body,

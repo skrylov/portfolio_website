@@ -249,11 +249,11 @@
   }
   .about-accordion summary:hover {
     text-decoration: underline;
-    text-decoration-color: var(--color-focus);
+    text-decoration-color: var(--color-highlight);
   }
   .about-accordion summary svg {
     flex: none;
-    color: var(--color-focus);
+    color: var(--color-muted);
   }
   .about-accordion details[open] summary svg {
     rotate: 180deg;
@@ -335,7 +335,7 @@
   --color-highlight: #6558f0;
   --color-on-accent: #ffffff;
   --color-line: #363641;
-  --color-focus: #b5adff;
+  --color-focus: #aecfff;
   --font-sans: Inter, 'Segoe UI', Arial, sans-serif;
   --radius-card: 0.75rem;
   --spacing-section: clamp(2.5rem, 5vw, 4rem);
